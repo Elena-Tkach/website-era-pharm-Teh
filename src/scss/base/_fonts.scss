@@ -1,0 +1,16 @@
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src:
+      url("fonts/#{$url}.woff2") format("woff2"),
+      url("fonts/#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+}
+
+@include font-face("Inter", "Inter-Regular", 400);
+@include font-face("Inter", "Inter-Medium", 500);
+@include font-face("Inter", "Inter-Bold", 700);

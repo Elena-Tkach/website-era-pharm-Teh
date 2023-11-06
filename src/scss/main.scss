@@ -1,0 +1,245 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bg-light-grey {
+  background-color: $light-grey;
+}
+.bg-blue-main {
+  background-color: $main-color;
+}
+
+.title--first {
+  color: $main-color;
+  @include font($weight: 500, $size: 2em);
+}
+
+.title--second {
+  @include font($weight: 500, $size: 2em);
+}
+
+.title--third {
+  color: $white;
+  @include font($weight: 700, $size: 20px);
+}
+
+.title--blue {
+  color: $main-color;
+}
+.title--center {
+  text-align: center;
+}
+
+.subtitle--third {
+  @include font($weight: 500, $size: 1em);
+}
+
+.subtitle--first {
+  color: $grey;
+  @include font($weight: 400, $size: 1em);
+}
+
+.btn {
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+
+  border: none;
+  background-color: transparent;
+  transition: $trans-06;
+
+  &--menu {
+    width: 55px;
+    height: 35px;
+    padding: 0 5px;
+    border: 1px solid transparent;
+    background: url("./img/burger-icon.svg") no-repeat center;
+    background-size: 90%;
+    transition: $trans-06;
+
+    &:hover,
+    &:focus {
+      width: 55px;
+      height: 35px;
+      border: 1px solid $blue-overlay;
+      background: url("./img/burger-icon-blue.svg") no-repeat center;
+      background-size: 90%;
+    }
+  }
+
+  &--close {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid transparent;
+    background: url("./img/close-icon-white.svg") no-repeat;
+    background-size: contain;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $light-grey;
+    }
+  }
+
+  &--footer {
+    padding: 15px 0;
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &--border {
+    padding: 10px 20px;
+    border: 3px solid $main-color;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      border: 3px solid $blue-overlay;
+    }
+  }
+
+  &--more {
+    color: $light-grey;
+    @include font($size: 14px);
+    padding: 5px 35px;
+    border: 3px solid $light-grey;
+
+    &:hover,
+    &:focus {
+      color: $grey;
+      border: 3px solid $main-color;
+    }
+  }
+}
+
+.bg-intro {
+  background-repeat: no-repeat;
+}
+
+.link {
+  transition: $trans-06;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $main-color;
+  }
+
+  &-logo {
+    transition: $trans-06;
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--absolute {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.vertival-line {
+  z-index: 5;
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100px;
+    background-color: $main-color;
+    position: absolute;
+    transform: translate3d(0, -50px, 0);
+  }
+}
+
+.text {
+  &--light {
+    opacity: 0.8;
+    @include font($size: 14px);
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $blue-overlay;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.wrapper-center {
+  text-align: center;
+}
+
+.hide-slider {
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  max-height: 0px;
+}
+
+.show-slider {
+  transition: max-height 1s;
+  max-height: 3000px;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+// @keyframes show {
+//   0% {
+//     transform: scaleY(0);
+//   }
+//   100% {
+//     transform: scaleY(1);
+//   }
+// }
+
+// @keyframes hide {
+//   0% {
+//     transform: scaleY(1);
+//   }
+//   100% {
+//     transform: scaleY(0);
+//   }
+// }
+
+@keyframes position_hidden {
+  0% {
+    position: static;
+  }
+  99% {
+    position: static;
+  }
+  100% {
+    position: absolute;
+    top: -100%;
+  }
+}

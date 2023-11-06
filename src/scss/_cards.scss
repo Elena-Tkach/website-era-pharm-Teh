@@ -1,0 +1,109 @@
+.cards {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+.cards__item {
+  position: relative;
+  margin-bottom: 90px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-item__content {
+  z-index: 5;
+  position: absolute;
+}
+
+.card-item__bg-wrap {
+  z-index: 3;
+  position: relative;
+}
+
+.card-img {
+  z-index: 3;
+  position: relative;
+  transition: $trans-06;
+  @include box-shadow($x: 0, $y: 16px, $blur: 29px, $color: rgba(15, 28, 52, 0.25));
+}
+
+.card-offers {
+  color: $white;
+  @include font($weight: 700, $size: 14px);
+  position: relative;
+}
+
+.cards__btn {
+  z-index: 6;
+  bottom: 0;
+  opacity: 0;
+  position: absolute;
+  transform: translate3d(0, 30px, 0);
+  transition: $trans-06;
+}
+
+.card-item {
+  transition: $trans-06;
+  &__subtitle {
+    margin-bottom: 25px;
+  }
+
+  &__offers {
+    &::after {
+      content: "";
+      width: 150px;
+      height: 3px;
+      background-color: $main-color;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__content {
+    transition: $trans-06;
+    top: 0;
+    transform: translate3d(10px, 40px, 0);
+  }
+
+  &:nth-child(2n + 1) {
+    .card-item__content {
+      left: 0;
+    }
+
+    .cards__btn {
+      left: 50%;
+    }
+  }
+
+  &:nth-child(2n) {
+    .cards__btn {
+      left: 20%;
+    }
+  }
+  &__offers {
+    transition: $trans-06;
+    transform: translate3d(50px, 50px, 0);
+
+    &::after {
+      left: 0;
+      transform: translate3d(10px, -50px, 0);
+    }
+  }
+
+  &__subtitle {
+    transition: $trans-06;
+    color: $light-grey;
+  }
+}
+
+.card-item-bg {
+  transition: $trans-06;
+}
