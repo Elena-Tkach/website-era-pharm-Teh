@@ -102,7 +102,7 @@
         </li>
       </ul>
 
-      <ul class="catalog__cards cards ">
+      <ul class="catalog__cards cards js-cards-main-contaier">
         <li class="cards__item card-item">
           <a href="#" class="cards__link link--cards">
             <article class="cards__article">
@@ -339,6 +339,31 @@
       </div>
     </div>
   </footer>
+
+  <template id="cardMainTemplate">
+    <li class="cards__item card-item js-card">
+      <a href="#" class="cards__link link--cards js-card-link">
+        <article class="cards__article">
+          <div class="card-item__content line-before">
+            <h3 class="card-item__title title  uppercase title--third js-card-title"></h3>
+            <p class="card-item__subtitle subtitle subtitle--third line-before js-card-subtitle"></p>
+            <p class="card-item__offers card-offers uppercase js-card-offers">3 предложения</p>
+          </div>
+
+          <div class="card-item__bg-wrap">
+            <picture class="js-card-picture">
+              <source class="js-card-source-max" media="(max-width: 767px)" srcset="img/bg-card-4-240.jpg" />
+              <source class="js-card-source-min" media="(min-width: 768px)" srcset="img/bg-card-4.jpg" />
+              <img class="card-item__img card-img js-card-img" src="img/bg-card-3.jpg" alt="Одноразовые ферментеры">
+            </picture>
+            <span class="card-item-bg"></span>
+          </div>
+          <button class="cards__btn  btn btn--more">Подробнее</button>
+        </article>
+      </a>
+    </li>
+  </template>
+
   <div class="overlay js-overlay"></div>
 </body>
 
