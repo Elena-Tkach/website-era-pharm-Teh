@@ -1,54 +1,62 @@
+
+
 export const indexCards = [
   
   {
     link: '#',
+    // imageCard:'img/bg-card-1.jpg',
     imageCard: {
-      sourceMax767: 'img/bg-card-1-240.jpg',
-      sourceMin768: 'img/bg-card-1.jpg',
+      sourceMax767: '../img/bg-card-1-240.jpg',
+      sourceMin768: '../img/bg-card-1.jpg',
     },
     title: 'Автоклавируемые',
-    subtitle1: 'лабораторные ферментеры',
-    subtitle2: '4 предложения',
+    subtitle: 'лабораторные ферментеры',
+    offers: '4 предложения',
+    
   },
   {
     link: '#',
+    // imageCard:'img/bg-card-2.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-2-240.jpg',
       sourceMin768: 'img/bg-card-2.jpg',
     },
     title: 'Стерилизуемые',
-    subtitle1: 'на месте ферментеры',
-    subtitle2: '2 предложения',
+    subtitle: 'на месте ферментеры',
+    offers: '2 предложения',
   },
   {
     link: '#',
+    // imageCard:'img/bg-card-3.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-3-240.jpg',
       sourceMin768: 'img/bg-card-3.jpg',
     },
     title: 'Малогабаритные',
-    subtitle1: 'биореакторы',
-    subtitle2: '4 предложения',
+    subtitle: 'биореакторы',
+    offers: '4 предложения',
   },
   {
     link: '#',
+    // imageCard:'http://localhost:3000/img/bg-card-4.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-4-240.jpg',
       sourceMin768: 'img/bg-card-4.jpg',
     },
     title: 'Одноразовые',
-    subtitle1: 'ферментеры',
-    subtitle2: '3 предложения',
+    subtitle: 'ферментеры',
+    offers: '3 предложения',
   },
    {
-    link: '#',
+     link: '#',
+    //  imageCard:'img/bg-card-5.jpg',
     imageCard: {
-      sourceMax767: 'img/bg-card-4-240.jpg',
-      sourceMin768: 'img/bg-card-4.jpg',
+      sourceMax767: 'img/bg-card-5-240.jpg',
+      sourceMin768: 'img/bg-card-5.jpg',
     },
     title: 'Управление',
-    subtitle1: 'биореактором',
-    subtitle2: '2 предложения',
+    subtitle: 'биореактором',
+    offers: '2 предложения',
   }
   
 ];
