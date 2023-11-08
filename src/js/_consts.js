@@ -4,7 +4,6 @@ export const indexCards = [
   
   {
     link: '#',
-    // imageCard:'img/bg-card-1.jpg',
     imageCard: {
       sourceMax767: '../img/bg-card-1-240.jpg',
       sourceMin768: '../img/bg-card-1.jpg',
@@ -16,7 +15,6 @@ export const indexCards = [
   },
   {
     link: '#',
-    // imageCard:'img/bg-card-2.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-2-240.jpg',
       sourceMin768: 'img/bg-card-2.jpg',
@@ -27,7 +25,6 @@ export const indexCards = [
   },
   {
     link: '#',
-    // imageCard:'img/bg-card-3.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-3-240.jpg',
       sourceMin768: 'img/bg-card-3.jpg',
@@ -38,7 +35,6 @@ export const indexCards = [
   },
   {
     link: '#',
-    // imageCard:'http://localhost:3000/img/bg-card-4.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-4-240.jpg',
       sourceMin768: 'img/bg-card-4.jpg',
@@ -49,7 +45,6 @@ export const indexCards = [
   },
    {
      link: '#',
-    //  imageCard:'img/bg-card-5.jpg',
     imageCard: {
       sourceMax767: 'img/bg-card-5-240.jpg',
       sourceMin768: 'img/bg-card-5.jpg',

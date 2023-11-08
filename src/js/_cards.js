@@ -32,7 +32,7 @@ export const renderCardList = (cards) => {
      item.link,
      item.title,
      item.subtitle,
-      item.offers,
+     item.offers,
      item.imageCard.sourceMax767,
      item.imageCard.sourceMin768,
    
