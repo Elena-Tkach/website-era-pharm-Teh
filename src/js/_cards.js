@@ -16,7 +16,6 @@ export const createCard = (link, title, subtitle, offers, image, image2) => {
   cardSourceMax.setAttribute('srcset', image);
   cardSourceMin.setAttribute('srcset', image2);
   cardImg.setAttribute('src', image);
-  console.log(cardImg);
   cardImg.setAttribute('alt', (title + ' ' + subtitle));
   cardTitle.innerHTML = title;
   cardSubtitle.innerHTML = subtitle;
