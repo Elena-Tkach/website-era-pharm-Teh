@@ -1,4 +1,4 @@
-const cardsContainer = document.querySelector('.js-cards-main-contaier')
+const cardsContainer = document.querySelector('.js-cards-main-contaier');
 
 export const createCard = (link, title, subtitle, offers, image, image2) => {
   const cardTemplate = document.querySelector('#cardMainTemplate');
