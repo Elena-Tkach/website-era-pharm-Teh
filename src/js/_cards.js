@@ -26,8 +26,6 @@ export const createCard = (link, title, subtitle, offers, image, image2) => {
 
 export const renderCardList = (cards) => {
   for (let item of cards) {
- 
-   
     const card = createCard(   
      item.link,
      item.title,

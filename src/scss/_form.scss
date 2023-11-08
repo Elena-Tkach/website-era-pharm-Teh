@@ -45,6 +45,8 @@
 
 .seach-list {
   @include list-reset;
+  overflow: hidden;
+  max-height: 60px;
 }
 .search__item {
   margin-bottom: 15px;
