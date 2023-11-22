@@ -1,19 +1,4 @@
-
-
 const searchListContainer = document.querySelector('.js-product-search');
-
-
-// const getProductName = (products = []) => {
-//   let productCardsCopy = [...indexCards];
-//   for (const items of productCardsCopy) {
-//     for (const values of items.products) {
-//       products.push(values.title);
-//     }
-//   }
-//    return products;
-// };
-
-
 const createProductSearchList = (link, title) => {
   const productSearchTemplate = document.querySelector('#productSearchTemplate');
   const cloneProductSearchTemplate = productSearchTemplate.content.cloneNode(true);
@@ -39,8 +24,6 @@ export const renderNameSearchList = (products) => {
          searchListContainer.append(product);
       }
    } 
-    
-    
       return products;
   }
 
