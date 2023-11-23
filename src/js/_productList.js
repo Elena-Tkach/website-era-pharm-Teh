@@ -1,4 +1,5 @@
 const searchListContainer = document.querySelector('.js-product-search');
+
 const createProductSearchList = (link, title) => {
   const productSearchTemplate = document.querySelector('#productSearchTemplate');
   const cloneProductSearchTemplate = productSearchTemplate.content.cloneNode(true);
@@ -24,7 +25,12 @@ export const renderNameSearchList = (products) => {
          searchListContainer.append(product);
       }
    } 
+   console.log(products);
       return products;
   }
+
+  export const removeList = () => {
+	return searchListContainer.innerHTML = '';
+}
 
   
