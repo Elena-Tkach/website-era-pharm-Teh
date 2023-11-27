@@ -102,7 +102,11 @@
   transition: $trans-06;
 
   &:hover {
+    color: #bcbde9;
     padding-left: 5px;
+    &::after {
+      background-color: #bcbde9;
+    }
 
     &:nth-child(2n) {
       padding-left: 75px;

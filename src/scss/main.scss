@@ -12,10 +12,22 @@
 .title--first {
   color: $main-color;
   @include font($weight: 500, $size: 2em);
+
+  &-s {
+    @include font($weight: 500, $size: 1.6em);
+    line-height: 1.5;
+  }
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .title--second {
   @include font($weight: 500, $size: 2em);
+  &-s {
+    @include font($weight: 500, $size: 1.8em);
+  }
 }
 
 .title--third {
@@ -47,20 +59,20 @@
 
   border: none;
   background-color: transparent;
-  transition: $trans-06;
+  transition: $trans-03;
 
   &--menu {
-    width: 55px;
+    width: 35px;
     height: 35px;
     padding: 0 5px;
     border: 1px solid transparent;
     background: url("./img/burger-icon.svg") no-repeat center;
     background-size: 90%;
-    transition: $trans-06;
+    transition: $trans-03;
 
     &:hover,
     &:focus {
-      width: 55px;
+      width: 35px;
       height: 35px;
       border: 1px solid $blue-overlay;
       background: url("./img/burger-icon-blue.svg") no-repeat center;
@@ -160,10 +172,10 @@
     top: 0;
     left: 50%;
     width: 3px;
-    height: 100px;
+    height: 70px;
     background-color: $main-color;
     position: absolute;
-    transform: translate3d(0, -50px, 0);
+    transform: translate3d(0, -35px, 0);
   }
 }
 
@@ -213,33 +225,15 @@
   transform: translate3d(0, 0, 0);
 }
 
-// @keyframes show {
+// @keyframes position_hidden {
 //   0% {
-//     transform: scaleY(0);
+//     position: static;
+//   }
+//   99% {
+//     position: static;
 //   }
 //   100% {
-//     transform: scaleY(1);
+//     position: absolute;
+//     top: -100%;
 //   }
 // }
-
-// @keyframes hide {
-//   0% {
-//     transform: scaleY(1);
-//   }
-//   100% {
-//     transform: scaleY(0);
-//   }
-// }
-
-@keyframes position_hidden {
-  0% {
-    position: static;
-  }
-  99% {
-    position: static;
-  }
-  100% {
-    position: absolute;
-    top: -100%;
-  }
-}
