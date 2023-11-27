@@ -35,6 +35,12 @@
   @include box-shadow($x: 0, $y: 16px, $blur: 29px, $color: rgba(15, 28, 52, 0.25));
 }
 
+.card-img-scale {
+  &:nth-child(2n) {
+    transform: scale(-1);
+  }
+}
+
 .card-offers {
   color: $white;
   @include font($weight: 700, $size: 14px);

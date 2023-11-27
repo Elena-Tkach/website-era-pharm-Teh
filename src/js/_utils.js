@@ -41,9 +41,12 @@ export const showBlock = () => {
       previousActiveElement.focus();
 
   }
+  
 
-
+  if (showMoreBtnEl) {
   showMoreBtnEl.addEventListener('click', toggleAccordeon);
+  }
+    
   menuBtnOpenEl.addEventListener('click', showMenu);
   closeMenuBtnEl.addEventListener('click', hideMenu);
   overlay.addEventListener('click', hideMenu);

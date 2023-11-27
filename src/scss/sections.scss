@@ -31,10 +31,29 @@
   display: none;
 }
 
+.intro-cards {
+  z-index: 2;
+  width: 500px;
+  height: 440px;
+  bottom: 0;
+  right: 0;
+  transform: translate3d(0, 127px, 0);
+  position: absolute;
+  background-image: url("./img/bg-2.png");
+  background-position: right bottom;
+  background-size: contain;
+  display: none;
+}
+
 .intro__wrapper-text {
   z-index: 5;
   margin-bottom: 50px;
   position: relative;
+}
+
+.main-page .intro__wrapper-text {
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .intro__subttitle {
