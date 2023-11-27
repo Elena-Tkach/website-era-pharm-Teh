@@ -58,6 +58,11 @@
 
 .card-item {
   transition: $trans-06;
+
+  &__title {
+    transition: $trans-06;
+  }
+
   &__subtitle {
     margin-bottom: 25px;
   }
@@ -79,21 +84,6 @@
     transform: translate3d(10px, 40px, 0);
   }
 
-  &:nth-child(2n + 1) {
-    .card-item__content {
-      left: 0;
-    }
-
-    .cards__btn {
-      left: 50%;
-    }
-  }
-
-  &:nth-child(2n) {
-    .cards__btn {
-      left: 20%;
-    }
-  }
   &__offers {
     transition: $trans-06;
     transform: translate3d(50px, 50px, 0);
@@ -107,6 +97,33 @@
   &__subtitle {
     transition: $trans-06;
     color: $light-grey;
+  }
+}
+
+.link--cards {
+  &:hover {
+    .card-item__title {
+      color: $main-color;
+    }
+    .card-img {
+      box-shadow: none;
+    }
+  }
+}
+
+.card-left {
+  .card-item__content {
+    left: 0;
+  }
+
+  .cards__btn {
+    left: 50%;
+  }
+}
+
+.card-right {
+  .cards__btn {
+    left: 20%;
   }
 }
 

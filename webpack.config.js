@@ -28,10 +28,35 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'cards.html'),
-        filename: 'cards.html',
+    new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'contacts.html'),
+        filename: 'contacts.html',
     }),
+     new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'aboutus.html'),
+        filename: 'aboutus.html',
+    }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'avtoclav.html'),
+        filename: 'avtoclav.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'control.html'),
+        filename: 'control.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'disposable.html'),
+        filename: 'disposable.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'small.html'),
+        filename: 'small.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'steril.html'),
+        filename: 'steril.html',
+    }),
+    
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
