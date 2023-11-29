@@ -25,9 +25,6 @@ export const showBlock = () => {
     document.body.classList.add('no-scroll');
     previousActiveElement = document.activeElement;
 
-    
-   
-
      setTimeout(() => {
     closeMenuBtnEl.focus();
   }, 100);

@@ -3,15 +3,15 @@
 const searchListContainer = document.querySelector('.js-product-search');
 
 
-const getProductName = (products = []) => {
-  let productCardsCopy = [...indexCards];
-  for (const items of productCardsCopy) {
-    for (const values of items.products) {
-      products.push(values.title);
-    }
-  }
-   return products;
-};
+// const getProductName = (products = []) => {
+//   let productCardsCopy = [...indexCards];
+//   for (const items of productCardsCopy) {
+//     for (const values of items.products) {
+//       products.push(values.title);
+//     }
+//   }
+//    return products;
+// };
 
 
 const createProductSearchList = (link, title) => {
@@ -40,8 +40,11 @@ export const renderNameSearchList = (products) => {
       }
    } 
     
-    
-      return products;
+  if (searchListContainer) {
+    return products;
+  }
+  return; 
+      
   }
 
   

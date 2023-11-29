@@ -42,6 +42,13 @@
   text-align: center;
 }
 
+.title--fourth {
+  @include font($weight: 700, $size: 20px);
+}
+.title-fifth {
+  @include font($weight: 500, $size: 14px);
+}
+
 .subtitle--third {
   @include font($weight: 500, $size: 1em);
 }
@@ -58,6 +65,7 @@
   text-align: center;
 
   border: none;
+  border-radius: 2px;
   background-color: transparent;
   transition: $trans-03;
 
@@ -81,16 +89,24 @@
   }
 
   &--close {
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    border: 1px solid transparent;
+    width: 25px;
+    height: 25px;
+    border: 1px solid $light-grey;
+    border-radius: 50%;
+
     background: url("./img/close-icon-white.svg") no-repeat;
     background-size: contain;
 
     &:hover,
     &:focus {
-      border: 1px solid $light-grey;
+      opacity: 0.3;
+      transform: rotate(90deg);
+      border: 1px solid $blue-overlay;
+    }
+
+    &-blue {
+      background: url("./img/close-blue.svg") no-repeat;
+      background-size: contain;
     }
   }
 
@@ -109,6 +125,11 @@
     &:focus {
       color: $main-color;
       border: 3px solid $blue-overlay;
+    }
+
+    &-small {
+      font-size: 12px;
+      padding: 6px 35px;
     }
   }
 
@@ -150,6 +171,7 @@
   &-center {
     display: flex;
     align-items: center;
+
     justify-content: center;
   }
 
@@ -178,11 +200,31 @@
     transform: translate3d(0, -35px, 0);
   }
 }
+.line-after {
+  z-index: 5;
+  position: relative;
+  padding: 20px 0;
+
+  &::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: $main-color;
+    position: absolute;
+  }
+}
 
 .text {
   &--light {
     opacity: 0.8;
     @include font($size: 14px);
+  }
+
+  &-14 {
+    @include font($weight: 300, $size: 12px);
+    line-height: 1.4;
   }
 }
 

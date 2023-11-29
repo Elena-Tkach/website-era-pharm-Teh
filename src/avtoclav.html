@@ -86,7 +86,7 @@
         </ul>
 
         <ul class="catalog__cards cards js-cards-contaier">
-          <li class="cards__item card-item card-left">
+          <li class="cards__item card-item card-left ">
             <article class="cards__article">
               <div class="card-item__content line-before">
                 <h3 class="card-item__title title  uppercase title--third">
@@ -223,7 +223,9 @@
       </div>
     </section>
   </main>
+
   <div class="vertival-line"></div>
+
   <footer class="footer">
     <div class="container">
       <a href="#" class="link-logo link-center">
@@ -296,6 +298,69 @@
   </footer>
 
   <div class="overlay js-overlay"></div>
+
+  <div class="modal js-modal" aria-modal="true" role="dialog" aria-label="Модальное окно с описанием продукта">
+    <div class="modal__container">
+      <button class="modal__btn btn btn--close btn--close-blue js-close-modal" aria-label="Закрыть модальное окно"
+        type="button"></button>
+      <div class="modal__header modal-header">
+        <div class="modal-header__container-img">
+          <picture>
+            <source media="(max-width: 425px)" srcset="img/bg-1-p-150.png" />
+            <source media="(max-width: 798px)" srcset="img/bg-1-p-250.png" />
+            <source media="(min-width: 799px)" srcset="img/bg-1-p-600.png" />
+            <img src="img/bg-1-p-600.png" alt="BIOSTAT®A" class="modal__img">
+          </picture>
+        </div>
+
+        <div class="modal-header__content modal-content">
+          <div class="modal-content__top">
+            <h4 class="modal__title title--blue title--fourth line-after uppercase">BIOSTAT® A</h4>
+            <button class="btn  btn--border btn--border-small">Заказать</button>
+          </div>
+          <p class="modal-content__text text text-14">
+            Новый лабораторный ферментер BIOSTAT® A - мини-модель из семейства ферментеров BIOSTAT®. Он предназначен для
+            контроля
+            роста клеток и ферментации и может быть использован в учебных целях. Управляющий блок BIOSTAT® A объединяет
+            в себе
+            различные функции, такие как Easy Load для насосов, аэрационный модуль и удобные коннекторы для датчиков и
+            связи. Этот
+            настольный биореактор компактен и экономит место в лаборатории.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal__body modal-body">
+        <div class="modal-body__list-contain">
+          <h5 class="modal-body__title title-fifth uppercase">Особенности:</h5>
+          <ul class="modal-body__list text text-14">
+            <li class="modal-body__item">Простая система аэрации</li>
+            <li class="modal-body__item">Интуитивное управление как для новичков, так и для опытных
+              пользователей
+            </li>
+            <item class="modal-body__item">Встроенный охладитель, экономящий воду</item>
+            <li class="modal-body__item">Удобные насосы с головкой Easy Load</li>
+            <li class="modal-body__item">Система сохранения данных для анализа</li>
+            <li class="modal-body__item">Гибкость управления и возможность выбора сосудов</li>
+            <li class="modal-body__item">Опция параллельного культивирования</li>
+            <li class="modal-body__item">Различные комплектации для разных целей, включая дистанционное управление для
+              расширенных комплектаций</li>
+          </ul>
+        </div>
+        <div class="modal-body__list-contain">
+          <h5 class="modal-body__title title-fifth uppercase">Области применения:</h5>
+          <ul class="modal-body__list text text-14">
+            <li class="modal-body__item">Микробиология: культивация бактерий, грибов и дрожжей</li>
+            <li class="modal-body__item">Культуры клеток: выращивание клеток животных и растений
+            </li>
+            <li class="modal-body__item">Маломасштабное производство белков и моноклональных антител</li>
+            <li class="modal-body__item">Исследовательские и учебные процессы.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>

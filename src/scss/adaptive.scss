@@ -17,6 +17,8 @@
   }
 }
 
+//-------------------768----------------------------------------------------------------------
+
 @include tablet-768 {
   .header {
     padding: 40px 0 20px;
@@ -213,12 +215,6 @@
       &::after {
         transform: translate3d(120px, -50px, 0);
       }
-
-      // &--block {
-      //   &::after {
-      //     transform: translate3d(-150px, -50px, 0);
-      //   }
-      // }
     }
 
     &:hover {
@@ -267,9 +263,6 @@
 
       &--block {
         transform: translate3d(-76px, 47px, 0);
-        &::after {
-          // transform: translate3d(-140px, -40px, 0);
-        }
       }
     }
 
@@ -287,23 +280,6 @@
         transform: translate3d(20px, 40px, 0);
       }
     }
-
-    // .link--cards {
-    //   &:hover {
-    //     .cards__btn {
-    //       opacity: 1;
-    //       transform: translate3d(0, -50px, 0);
-    //     }
-
-    //     .card-item-bg {
-    //       transform: translate3d(-140px, 30px, 0);
-    //     }
-
-    //     .card-item__content {
-    //       transform: translate3d(20px, 40px, 0);
-    //     }
-    //   }
-    // }
   }
 
   .card-last {
@@ -353,7 +329,64 @@
       left: 50%;
     }
   }
+
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__container-img {
+      text-align: start;
+      margin-right: 35px;
+    }
+
+    .modal__img {
+      margin-top: -40px;
+    }
+  }
+
+  .modal-content {
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .modal__title {
+    margin-bottom: 0;
+  }
+
+  .line-after {
+    &::after {
+      width: 80%;
+    }
+  }
+
+  .modal-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__list-contain {
+      width: 48%;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .text {
+    &-14 {
+      @include font($size: 14px);
+      line-height: 1.6;
+    }
+  }
 }
+
+//-------------------992---------------------------------------------------------------
 
 @include tablet-992 {
   .intro-main,
@@ -375,8 +408,20 @@
   .main-page .intro__wrapper-text {
     width: 50%;
   }
+
+  .btn--close {
+    width: 35px;
+    height: 35px;
+    padding: 20px;
+  }
+
+  .modal__container {
+    width: 80%;
+    padding: 70px;
+  }
 }
 
+//-------------------------1200------------------------------------------------------------------
 @include laptopM-1200 {
   .main-page .intro__wrapper-text {
     width: 50%;
@@ -473,6 +518,24 @@
 
     &-s {
       @include font($size: 2em);
+    }
+  }
+
+  .modal {
+    &__container {
+      width: 60%;
+      margin: 4% auto;
+      padding: 70px 100px;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    &__header {
+      margin-bottom: 30px;
     }
   }
 }
