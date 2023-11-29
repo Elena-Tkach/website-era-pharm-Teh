@@ -191,12 +191,9 @@
   }
 
   .card-left {
+    cursor: pointer;
     .card-item__bg-wrap {
       padding-left: 140px;
-    }
-
-    .card-item__content {
-      left: 0;
     }
 
     .card-item-bg {
@@ -210,28 +207,32 @@
       transform: translate3d(87px, 30px, 0);
     }
 
-    .card-item__offers {
+    .card-offers {
       transform: translate3d(170px, 50px, 0);
 
       &::after {
         transform: translate3d(120px, -50px, 0);
       }
+
+      // &--block {
+      //   &::after {
+      //     transform: translate3d(-150px, -50px, 0);
+      //   }
+      // }
     }
 
-    .link--cards {
-      &:hover {
-        .cards__btn {
-          opacity: 1;
-          transform: translate3d(0, -50px, 0);
-        }
+    &:hover {
+      .cards__btn {
+        opacity: 1;
+        transform: translate3d(0, -50px, 0);
+      }
 
-        .card-item-bg {
-          transform: translate3d(140px, 30px, 0);
-        }
+      .card-item-bg {
+        transform: translate3d(140px, 30px, 0);
+      }
 
-        .card-item__content {
-          transform: translate3d(-20px, 40px, 0);
-        }
+      .card-item__content {
+        transform: translate3d(-20px, 40px, 0);
       }
     }
   }
@@ -256,31 +257,53 @@
       transform: translate3d(-80px, 30px, 0);
     }
 
-    .card-item__offers {
+    .card-offers {
       transform: translate3d(-40px, 50px, 0);
 
       &::after {
         left: 0;
         transform: translate3d(-50px, -50px, 0);
       }
-    }
 
-    .link--cards {
-      &:hover {
-        .cards__btn {
-          opacity: 1;
-          transform: translate3d(0, -50px, 0);
-        }
-
-        .card-item-bg {
-          transform: translate3d(-140px, 30px, 0);
-        }
-
-        .card-item__content {
-          transform: translate3d(20px, 40px, 0);
+      &--block {
+        transform: translate3d(-76px, 47px, 0);
+        &::after {
+          // transform: translate3d(-140px, -40px, 0);
         }
       }
     }
+
+    &:hover {
+      .cards__btn {
+        opacity: 1;
+        transform: translate3d(0, -50px, 0);
+      }
+
+      .card-item-bg {
+        transform: translate3d(-140px, 30px, 0);
+      }
+
+      .card-item__content {
+        transform: translate3d(20px, 40px, 0);
+      }
+    }
+
+    // .link--cards {
+    //   &:hover {
+    //     .cards__btn {
+    //       opacity: 1;
+    //       transform: translate3d(0, -50px, 0);
+    //     }
+
+    //     .card-item-bg {
+    //       transform: translate3d(-140px, 30px, 0);
+    //     }
+
+    //     .card-item__content {
+    //       transform: translate3d(20px, 40px, 0);
+    //     }
+    //   }
+    // }
   }
 
   .card-last {
@@ -311,20 +334,18 @@
       }
     }
 
-    .link--cards {
-      &:hover {
-        .cards__btn {
-          opacity: 1;
-          transform: translate3d(0, -50px, 0);
-        }
+    &:hover {
+      .cards__btn {
+        opacity: 1;
+        transform: translate3d(0, -50px, 0);
+      }
 
-        .card-item-bg {
-          transform: translate3d(140px, 30px, 0);
-        }
+      .card-item-bg {
+        transform: translate3d(140px, 30px, 0);
+      }
 
-        .card-item__content {
-          transform: translate3d(-20px, 40px, 0);
-        }
+      .card-item__content {
+        transform: translate3d(-20px, 40px, 0);
       }
     }
 

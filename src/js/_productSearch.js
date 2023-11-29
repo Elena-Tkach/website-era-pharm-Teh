@@ -1,4 +1,4 @@
-const products = document.querySelectorAll('.js-product-search-link');
+// const products = document.querySelectorAll('.js-product-search-link');
 
 
 // const getProductName = (products = []) => {
@@ -10,13 +10,13 @@ const products = document.querySelectorAll('.js-product-search-link');
 //   }
 //    return products;
 // };
-export const filterProduct = () => {
+// export const filterProduct = () => {
   
-  for (const item of products) {
-    console.log(item);
- console.log('fasfsf')
-  }
+//   for (const item of products) {
+//     console.log(item);
+//  console.log('fasfsf')
+//   }
  
-}
+// }
   
 
