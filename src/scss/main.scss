@@ -72,10 +72,11 @@
   &--menu {
     width: 35px;
     height: 35px;
-    padding: 0 5px;
+    // padding: 5px;
+    border-radius: 50%;
     border: 1px solid transparent;
     background: url("./img/burger-icon.svg") no-repeat center;
-    background-size: 90%;
+    background-size: 35px;
     transition: $trans-03;
 
     &:hover,
@@ -84,11 +85,12 @@
       height: 35px;
       border: 1px solid $blue-overlay;
       background: url("./img/burger-icon-blue.svg") no-repeat center;
-      background-size: 90%;
+      background-size: 30px;
     }
   }
 
   &--close {
+    opacity: 0.5;
     width: 25px;
     height: 25px;
     border: 1px solid $light-grey;
@@ -99,9 +101,9 @@
 
     &:hover,
     &:focus {
-      opacity: 0.3;
+      opacity: 0.8;
       transform: rotate(90deg);
-      border: 1px solid $blue-overlay;
+      border: 1px solid $grey;
     }
 
     &-blue {
@@ -229,7 +231,7 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 0;
   right: 0;
@@ -260,7 +262,11 @@
   transition: max-height 1s;
   max-height: 3000px;
 }
-
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -100%, 0);
+}
 .show {
   opacity: 1;
   visibility: visible;

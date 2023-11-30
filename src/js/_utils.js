@@ -1,11 +1,13 @@
 export const showBlock = () => {
   let previousActiveElement;
+  // const cardsBtn = document.querySelector('.js-cards-contaier');
+  const modal = document.querySelector('.js-modal');
   const showMoreBtnEl = document.querySelector('.js-btn-show-more');
   const blockMoreEl = document.querySelector('.js-block-more');
-  const menuBtnOpenEl = document.querySelector('.js-btn-menu-open');
   const navBlockEl = document.querySelector('.js-nav-block');
   const closeMenuBtnEl = document.querySelector('.js-btn-close');
   const overlay = document.querySelector('.js-overlay');
+
 
   const toggleAccordeon = () => {
     blockMoreEl.classList.toggle('show-slider');
@@ -19,33 +21,60 @@ export const showBlock = () => {
   };
 
 
-  const showMenu = () => {
-    navBlockEl.classList.add('show'); 
-    overlay.classList.add('show');
-    document.body.classList.add('no-scroll');
+
+  const showMenu = (element, closeMenuBtn) => {
+    element.classList.add('show'); 
     previousActiveElement = document.activeElement;
 
      setTimeout(() => {
-    closeMenuBtnEl.focus();
-  }, 100);
+      closeMenuBtn.focus();
+     }, 100);
+    console.log(previousActiveElement);
 
   }
 
-    const hideMenu = () => {
-      navBlockEl.classList.remove('show'); 
-      overlay.classList.remove('show');
-      document.body.classList.remove('no-scroll');
+    const hideMenu = (element) => {
+      element.classList.remove('show'); 
+      
       previousActiveElement.focus();
+      console.log(previousActiveElement);
 
   }
   
-
-  if (showMoreBtnEl) {
-  showMoreBtnEl.addEventListener('click', toggleAccordeon);
-  }
+  document.body.addEventListener('click', event => {
     
-  menuBtnOpenEl.addEventListener('click', showMenu);
-  closeMenuBtnEl.addEventListener('click', hideMenu);
-  overlay.addEventListener('click', hideMenu);
+    if (showMoreBtnEl) {
+      showMoreBtnEl.addEventListener('click', toggleAccordeon);
+    }
+    if (event.target.classList.contains('js-btn-menu-open')) {
+      showMenu(navBlockEl, closeMenuBtnEl);
+      overlay.classList.add('show');
+     
+    }
+
+    if (event.target.classList.contains('js-btn-close')) {
+      hideMenu(navBlockEl);
+      overlay.classList.remove('show');
+    }
+
+    if (event.target.classList.contains('js-overlay')) {
+      
+       hideMenu(navBlockEl);
+    }
+
+    if (event.target.classList.contains('cards__article')) {
+    
+      showMenu(modal, closeMenuBtnEl);
+      document.body.classList.add('no-scroll');
+    }
+
+    if (event.target.classList.contains('js-btn-close') ||
+        event.target.classList.contains('modal')  ) {
+      hideMenu(modal);
+      document.body.classList.remove('no-scroll');
+    
+    }
+   
+  })
 
 };
