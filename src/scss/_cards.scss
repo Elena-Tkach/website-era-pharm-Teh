@@ -35,16 +35,36 @@
   @include box-shadow($x: 0, $y: 16px, $blur: 29px, $color: rgba(15, 28, 52, 0.25));
 }
 
-.card-img-scale {
-  &:nth-child(2n) {
-    transform: scale(-1);
-  }
-}
-
 .card-offers {
+  pointer-events: none;
+  position: relative;
+  display: inline-block;
+
   color: $white;
   @include font($weight: 700, $size: 14px);
-  position: relative;
+
+  transition: $trans-06;
+  transform: translate3d(50px, 50px, 0);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 150px;
+    height: 3px;
+    background-color: $main-color;
+
+    transform: translate3d(10px, -50px, 0);
+  }
+
+  &--block {
+    width: 50%;
+
+    &::after {
+      bottom: 50%;
+    }
+  }
 }
 
 .cards__btn {
@@ -67,31 +87,10 @@
     margin-bottom: 25px;
   }
 
-  &__offers {
-    &::after {
-      content: "";
-      width: 150px;
-      height: 3px;
-      background-color: $main-color;
-      position: absolute;
-      bottom: 0;
-    }
-  }
-
   &__content {
     transition: $trans-06;
     top: 0;
     transform: translate3d(10px, 40px, 0);
-  }
-
-  &__offers {
-    transition: $trans-06;
-    transform: translate3d(50px, 50px, 0);
-
-    &::after {
-      left: 0;
-      transform: translate3d(10px, -50px, 0);
-    }
   }
 
   &__subtitle {
@@ -100,7 +99,8 @@
   }
 }
 
-.link--cards {
+.card-item {
+  cursor: pointer;
   &:hover {
     .card-item__title {
       color: $main-color;
@@ -129,4 +129,8 @@
 
 .card-item-bg {
   transition: $trans-06;
+}
+
+.card-item__bg-wrap {
+  pointer-events: none;
 }

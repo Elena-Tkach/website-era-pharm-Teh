@@ -40,8 +40,11 @@ export const renderNameSearchList = (products) => {
       }
    } 
     
-    
-      return products;
+  if (searchListContainer) {
+    return products;
+  }
+  return; 
+      
   }
 
   
