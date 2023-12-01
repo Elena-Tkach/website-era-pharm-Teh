@@ -12,10 +12,12 @@ export const showBlock = () => {
   const toggleAccordeon = () => {
     blockMoreEl.classList.toggle('show-slider');
    
-    blockMoreEl.classList.contains('show') ? blockMoreEl.setAttribute('aria-hidden', 'false') : 
+    blockMoreEl.classList.contains('show') ?
+      blockMoreEl.setAttribute('aria-hidden', 'false') : 
       blockMoreEl.setAttribute('aria-hidden', 'true');
     
-    blockMoreEl.classList.contains('show') ? showMoreBtnEl.setAttribute('aria-label', 'Закрыть блок') :
+    blockMoreEl.classList.contains('show') ?
+      showMoreBtnEl.setAttribute('aria-label', 'Закрыть блок') :
        showMoreBtnEl.setAttribute('aria-label', 'Показать больше информации');
     
   };
@@ -33,19 +35,23 @@ export const showBlock = () => {
 
   }
 
-    const hideMenu = (element) => {
-      element.classList.remove('show'); 
-      
-      previousActiveElement.focus();
-      console.log(previousActiveElement);
+  const hideMenu = (element) => {
+    element.classList.remove('show'); 
+    
+    previousActiveElement.focus();
+    console.log(previousActiveElement);
 
   }
-  
+
   document.body.addEventListener('click', event => {
     
     if (showMoreBtnEl) {
       showMoreBtnEl.addEventListener('click', toggleAccordeon);
     }
+    if (event.target.classList.contains('js-btn-show-more')) {
+      toggleAccordeon();
+    }
+
     if (event.target.classList.contains('js-btn-menu-open')) {
       showMenu(navBlockEl, closeMenuBtnEl);
       overlay.classList.add('show');
