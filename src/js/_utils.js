@@ -5,6 +5,8 @@ export const showBlock = () => {
   const blockMoreEl = document.querySelector('.js-block-more');
   const navBlockEl = document.querySelector('.js-nav-block');
   const closeMenuBtnEl = document.querySelector('.js-btn-close');
+  const listIconst = document.querySelectorAll('.js-btn-icon');
+  const cardContainer = document.querySelector('.js-cards-contaier');
   const overlay = document.querySelector('.js-overlay');
 
 
@@ -37,6 +39,14 @@ export const showBlock = () => {
     element.classList.remove('show'); 
     previousActiveElement.focus();
   }
+
+  const desactiveBtn = (list) => {
+    console.log(list);
+    list.forEach(item => {
+      item.classList.remove('selected');
+    });
+  }
+
 
   document.body.addEventListener('click', event => {
     
@@ -74,7 +84,18 @@ export const showBlock = () => {
        
       hideMenu(modal);
       document.body.classList.remove('no-scroll');
-    
+    }
+
+    if (event.target.classList.contains('btn--icons-list')) {
+        desactiveBtn(listIconst);
+      event.target.classList.add('selected');
+      cardContainer.classList.add('card-list');
+    }
+
+    if (event.target.classList.contains('btn--icons-cards')) {
+      desactiveBtn(listIconst);
+      event.target.classList.add('selected');
+       cardContainer.classList.remove('card-list');
     }
   })
 };

@@ -2,11 +2,14 @@
 // import { filterFunction } from './_search';
 import { indexCards } from './_consts';
 import { showBlock } from './_utils';
-import { renderNameSearchList } from './_productList';
+import { searchListContainer, renderNameSearchList } from './_productList';
 // import { renderCardList } from './_cards';
 // import { filterProduct } from './_productSearch';
 
 showBlock(); 
 // renderCardList(indexCards);
-renderNameSearchList(indexCards);
-// filterProduct();
+if (searchListContainer) {
+  renderNameSearchList(indexCards);
+}
+
+// filterProduct()

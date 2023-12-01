@@ -1,6 +1,6 @@
 
 
-const searchListContainer = document.querySelector('.js-product-search');
+export const searchListContainer = document.querySelector('.js-product-search');
 
 
 // const getProductName = (products = []) => {
@@ -40,11 +40,9 @@ export const renderNameSearchList = (products) => {
       }
    } 
     
-  if (searchListContainer) {
+ 
     return products;
-  }
-  return; 
-      
+ 
   }
 
   
