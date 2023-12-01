@@ -1,6 +1,5 @@
 export const showBlock = () => {
   let previousActiveElement;
-  // const cardsBtn = document.querySelector('.js-cards-contaier');
   const modal = document.querySelector('.js-modal');
   const showMoreBtnEl = document.querySelector('.js-btn-show-more');
   const blockMoreEl = document.querySelector('.js-block-more');
@@ -31,16 +30,12 @@ export const showBlock = () => {
      setTimeout(() => {
       closeMenuBtn.focus();
      }, 100);
-    console.log(previousActiveElement);
 
   }
 
   const hideMenu = (element) => {
     element.classList.remove('show'); 
-    
     previousActiveElement.focus();
-    console.log(previousActiveElement);
-
   }
 
   document.body.addEventListener('click', event => {
@@ -76,11 +71,10 @@ export const showBlock = () => {
 
     if (event.target.classList.contains('js-btn-close') ||
         event.target.classList.contains('modal')  ) {
+       
       hideMenu(modal);
       document.body.classList.remove('no-scroll');
     
     }
-   
   })
-
 };
