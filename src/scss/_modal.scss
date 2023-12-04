@@ -7,8 +7,9 @@
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 100%;
-  background-color: $blue-overlay;
+  height: auto;
+  transition: transform $trans-bezie;
+  // background-color: $blue-overlay;
 
   &__container {
     position: relative;
@@ -50,8 +51,6 @@
 }
 
 .modal-body {
- 
-
   &__list {
     padding-left: 15px;
     list-style: square;

@@ -114,6 +114,15 @@
     color: $main-color;
     @include font($weight: 700, $size: 2em);
     text-shadow: 0px 0px 4px #fff;
+    text-shadow:
+      1px 0 #fff,
+      -1px 0 #fff,
+      0 1px #fff,
+      0 -1px #fff,
+      1px 1px #fff,
+      -1px -1px #fff,
+      1px -1px #fff,
+      -1px 1px #fff;
   }
 
   .subtitle--first {
@@ -171,10 +180,6 @@
     margin-right: 1px;
   }
 
-  .cards {
-    margin-bottom: 50px;
-  }
-
   .card-offers {
     @include font($size: 18px);
 
@@ -190,6 +195,24 @@
 
     &__subtitle {
       color: $black;
+    }
+
+    &:hover {
+      .card-item__title {
+        text-shadow: none;
+      }
+      .card-item__subtitle {
+        color: $white;
+        // text-shadow:
+        //   1px 0 $main-color,
+        //   -1px 0 $main-color,
+        //   0 1px $main-color,
+        //   0 -1px $main-color,
+        //   1px 1px $main-color,
+        //   -1px -1px $main-color,
+        //   1px -1px $main-color,
+        //   -1px 1px #fff;
+      }
     }
   }
 
@@ -269,6 +292,7 @@
 
     &:hover {
       .cards__btn {
+        pointer-events: painted;
         opacity: 1;
         transform: translate3d(0, -50px, 0);
       }
@@ -313,6 +337,7 @@
 
     &:hover {
       .cards__btn {
+        pointer-events: painted;
         opacity: 1;
         transform: translate3d(0, -50px, 0);
       }
