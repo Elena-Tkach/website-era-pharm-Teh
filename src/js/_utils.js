@@ -10,16 +10,22 @@ export const showBlock = () => {
   const overlay = document.querySelector('.js-overlay');
 
 
-  const toggleAccordeon = () => {
-    blockMoreEl.classList.toggle('show-slider');
+  const toggleAccordeon = (moreBtn, block) => {
+    block.classList.toggle('show-slider');
+    console.log(block);
    
-    blockMoreEl.classList.contains('show') ?
-      blockMoreEl.setAttribute('aria-hidden', 'false') : 
-      blockMoreEl.setAttribute('aria-hidden', 'true');
     
-    blockMoreEl.classList.contains('show') ?
-      showMoreBtnEl.setAttribute('aria-label', 'Закрыть блок') :
-       showMoreBtnEl.setAttribute('aria-label', 'Показать больше информации');
+    
+    if (block.classList.contains('show-slider')) {
+      block.setAttribute('aria-hidden', 'false');
+      moreBtn.setAttribute('aria-label', 'Закрыть блок');
+      moreBtn.innerHTML = 'Скрыть блок';
+    }
+    if (!block.classList.contains('show-slider')) {
+      block.setAttribute('aria-hidden', 'true');
+      moreBtn.setAttribute('aria-label', 'Показать больше информации');
+      moreBtn.innerHTML = 'Больше информации';
+    }
     
   };
 
@@ -47,14 +53,10 @@ export const showBlock = () => {
     });
   }
 
-
   document.body.addEventListener('click', event => {
     
-    if (showMoreBtnEl) {
-      showMoreBtnEl.addEventListener('click', toggleAccordeon);
-    }
     if (event.target.classList.contains('js-btn-show-more')) {
-      toggleAccordeon();
+      toggleAccordeon(showMoreBtnEl, blockMoreEl);
     }
 
     if (event.target.classList.contains('js-btn-menu-open')) {
