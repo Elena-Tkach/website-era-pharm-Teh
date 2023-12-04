@@ -87,8 +87,15 @@
     padding-top: 100px;
   }
 
+  // &__slider {
+  //   padding-bottom: 50px;
+  // }
+
   &__text {
     margin-bottom: 50px;
+  }
+  &__wrapper--btn {
+    display: flex;
   }
 }
 
