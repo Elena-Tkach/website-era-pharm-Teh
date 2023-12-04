@@ -5,7 +5,7 @@ export const showBlock = () => {
   const blockMoreEl = document.querySelector('.js-block-more');
   const navBlockEl = document.querySelector('.js-nav-block');
   const closeMenuBtnEl = document.querySelector('.js-btn-close');
-  // const overlay = document.querySelector('.js-overlay');
+   const overlay = document.querySelector('.js-overlay');
 
 
   const toggleAccordeon = (moreBtn, block) => {
@@ -50,22 +50,26 @@ export const showBlock = () => {
 
     if (event.target.classList.contains('js-btn-menu-open')) {
       showMenu(navBlockEl, closeMenuBtnEl);
-      // overlay.classList.add('show');
+      //  overlay.classList.add('show');
      
     }
 
     if (event.target.classList.contains('js-btn-close')) {
       hideMenu(navBlockEl);
-      // overlay.classList.remove('show');
+      //  overlay.classList.remove('show');
     }
 
-    if (event.target.classList.contains('js-overlay')) {
-      hideMenu(navBlockEl);
-      // overlay.classList.remove('show');
-    }
+    // if (!event.target.classList.contains('js-nav-block')) {
+    //    hideMenu(navBlockEl);
+    // }
+
+    // if (event.target.classList.contains('js-overlay')) {
+    //   hideMenu(navBlockEl);
+    //    overlay.classList.remove('show');
+    // }
 
     if (event.target.classList.contains('cards__article')) {
-      console.log(event.target);
+       hideMenu(navBlockEl);
       showMenu(modal, closeMenuBtnEl);
       document.body.classList.add('no-scroll');
     }
