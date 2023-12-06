@@ -33,18 +33,21 @@
             type="button"></button>
           <nav class="nav">
             <ul class="nav__list">
+              <li class="nav__item nav-item nav-item--line uppercase">
+                Главная
+                <a href="index.html" class="nav__link link--absolute link"></a>
+              </li>
+              <li class="nav__item nav-item nav-item--line uppercase">
+                Каталог
+                <a href="index.html" class="nav__link link--absolute link"></a>
+              </li>
               <li class="nav__item nav-item nav-item--line  uppercase">
                 О нас
                 <a href="aboutus.html" class="nav__link link--absolute link "></a>
               </li>
-              <li class="nav__item nav-item nav-item--line uppercase">
+              <li class="nav__item nav-item nav-item--line uppercase active-item">
                 Контакты
                 <a href="contacts.html" class="nav__link link--absolute link"></a>
-              </li>
-
-              <li class="nav__item nav-item nav-item--line uppercase">
-                Каталог
-                <a href="index.html" class="nav__link link--absolute link"></a>
               </li>
             </ul>
           </nav>
@@ -53,6 +56,110 @@
       </div>
     </div>
   </header>
+
+  <main class="main-page">
+    <div class="container">
+      <section class="intro">
+        <div class="bg-intro intro-about"></div>
+        <div class="intro__wrapper-text">
+          <h1 class="intro__title title title--first title--first-s  uppercase"><span class="bold">о нас</span></h1>
+        </div>
+      </section>
+    </div>
+
+    <div class="vertival-line"></div>
+    <section class="section about-text bg-light-grey">
+      <div class="container">
+        <div class="container-text">
+          <p class="text--mg text text--small">
+            Era-PharmTeh - ваш надежный партнер в сфере поставок современного оборудования для фармацевтических
+            компаний.
+            Мы
+            предлагаем широкий ассортимент высококачественных технологических решений, специализированных для
+            фармацевтической
+            промышленности. Наша цель - помочь вам оптимизировать производственные процессы и обеспечить качество
+            продукции на
+            высшем уровне.
+          </p>
+          <div class="catalog__wrapper--btn wrapper--left">
+            <a href="contacts.html" class="btn catalog__btn btn--border">Отправить запрос</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="#" class="link-logo link-center">
+        <picture>
+          <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
+          <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
+          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo">
+        </picture>
+      </a>
+      <div class="footer__wrapper">
+        <nav class="footer__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class=" link"> О нас</a>
+            </li>
+
+            <li class="nav__item">
+
+              <a href="#" class="link">Контакты</a>
+            </li>
+
+            <li class="nav__item ">
+
+              <a href="#catalog" class="link">Каталог</a>
+            </li>
+
+            <li class="nav__item">
+              <form action="" class="nav__form form form--footer">
+                <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
+                  placeholder="Написать нам"></textarea>
+                <button class="form__btn btn btn--footer" type="submit">Отправить</button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+
+        <address class="footer__address address">
+          <ul class="address__list">
+            <li class="address__item">
+              <p class="addresss__text text--light">
+                <span class="uppercase">БИН:</span>
+                200940009126
+              </p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">A15H8C3, Казахстан</p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1</p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">
+                <span class="uppercase">Тел.:</span>
+                <a class="link" href="tel:+77760076373" intemprop="telephone">+7 (776) 007-63-73</a>
+              </p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">
+                <span class="uppercase">E-mail:</span>
+                <a itemprop="email" href="mailto:info@era-metal.kz" class="link">info@era-metal.kz</a>
+              </p>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="footer__wrapper--center wrapper-center">
+        <small class="text--light">© <span>2023</span> TOO «Era Metal»</small>
+      </div>
+    </div>
+  </footer>
 
   <div class="overlay js-overlay"></div>
 </body>
