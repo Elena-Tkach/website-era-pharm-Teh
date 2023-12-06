@@ -140,13 +140,12 @@
       transform: translate3d(0, -70px, 0);
     }
   }
-
-  .catalog {
+  .section {
     padding: 150px 0;
+  }
 
-    &__slider {
-      padding: 0 10%;
-    }
+  .container-text {
+    padding: 0 10%;
   }
 
   .footer {
@@ -415,19 +414,15 @@
 //-------------------992---------------------------------------------------------------
 
 @include tablet-992 {
-  .intro-main,
-  .intro-cards {
+  .bg-intro {
     display: block;
   }
 
   .cards {
     padding: 0 10%;
   }
-
-  .catalog {
-    &__slider {
-      padding: 0 20%;
-    }
+  .container-text {
+    padding: 0 20%;
   }
 
   .main-page .intro__wrapper-text {

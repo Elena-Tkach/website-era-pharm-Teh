@@ -32,19 +32,25 @@
 }
 
 .intro-cards {
-  z-index: 2;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 440px;
+  transform: translate3d(0, 127px, 0);
+  background-image: url("./img/bg-2.png");
+  background-position: right bottom;
+}
+
+.intro-about {
   width: 500px;
   height: 440px;
   bottom: 0;
   right: 0;
-  transform: translate3d(0, 127px, 0);
+  transform: translate3d(0, 116px, 0);
   position: absolute;
-  background-image: url("./img/bg-2.png");
+  background-image: url("./img/bg-about.png");
   background-position: right bottom;
-  background-size: contain;
-  display: none;
 }
-
 .intro__wrapper-text {
   z-index: 5;
   margin-bottom: 50px;
@@ -69,9 +75,11 @@
   justify-content: center;
 }
 
-.catalog {
+.section {
   padding: 100px 0;
+}
 
+.catalog {
   &__title {
     margin-bottom: 70px;
   }
@@ -87,16 +95,15 @@
     padding-top: 100px;
   }
 
-  // &__slider {
-  //   padding-bottom: 50px;
+  // &__text {
+  //   margin-bottom: 50px;
   // }
-
-  &__text {
-    margin-bottom: 50px;
-  }
   &__wrapper--btn {
     display: flex;
   }
+}
+.text--mg {
+  margin-bottom: 50px;
 }
 
 .footer {

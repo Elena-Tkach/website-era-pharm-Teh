@@ -157,7 +157,11 @@
 }
 
 .bg-intro {
+  z-index: 2;
+  position: absolute;
   background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
 }
 
 .link {

@@ -33,6 +33,14 @@
             type="button"></button>
           <nav class="nav">
             <ul class="nav__list">
+              <li class="nav__item nav-item nav-item--line uppercase">
+                Главная
+                <a href="index.html" class="nav__link link--absolute link"></a>
+              </li>
+              <li class="nav__item nav-item nav-item--line uppercase">
+                Каталог
+                <a href="index.html" class="nav__link link--absolute link"></a>
+              </li>
               <li class="nav__item nav-item nav-item--line  uppercase">
                 О нас
                 <a href="aboutus.html" class="nav__link link--absolute link "></a>
@@ -42,10 +50,7 @@
                 <a href="contacts.html" class="nav__link link--absolute link"></a>
               </li>
 
-              <li class="nav__item nav-item nav-item--line uppercase">
-                Каталог
-                <a href="index.html" class="nav__link link--absolute link"></a>
-              </li>
+
             </ul>
           </nav>
         </div>
@@ -69,29 +74,17 @@
 
     <div class="vertival-line"></div>
 
-    <section class="catalog bg-light-grey">
+    <section class="section catalog bg-light-grey">
       <div class="container">
         <a id="catalog"></a>
         <h2 class="catalog__title title title--second title--second-s title--center uppercase visually-hidden">Каталог
         </h2>
-        <ul class="catalog__icons icons icons--center">
-          <li class="icons__item">
-            <button class="icons__btn btn btn--icons-cards js-btn-icon selected" aria-label="Показать карточками"
-              aria-current="true">
-            </button>
-          </li>
-          <li class="icons__item">
-            <button class="icons__btn btn btn--icons-list js-btn-icon" aria-label="Показать списком"
-              aria-current="false">
-            </button>
-          </li>
-        </ul>
 
         <ul class="catalog__cards cards js-cards-contaier card-list">
-          <li class="cards__item card-item card-left" data-modal="modal1">
-            <article class="cards__article">
+          <li class="cards__item card-item card-left">
+            <article class="cards__article js-modal-btn" data-modal="modal1" tabindex="1">
               <div class="card-item__content line-before">
-                <h3 class="card-item__title title  uppercase title--third text-shadow">
+                <h3 class="card-item__title title  uppercase title--third">
                   BIOSTAT® A
                 </h3>
                 <p class="card-item__offers card-offers card-offers--block">Новый лабораторный ферментер</p>
@@ -106,13 +99,13 @@
                 </picture>
 
                 <span class="card-item-bg"></span>
-                <button class="cards__btn  btn btn--more">Подробнее</button>
+                <button class="cards__btn  btn btn--more" type="button">Подробнее</button>
               </div>
             </article>
           </li>
 
-          <li class="cards__item card-item card-right" data-modal="modal2">
-            <article class="cards__article">
+          <li class="cards__item card-item card-right">
+            <article class="cards__article js-modal-btn" data-modal="modal2" tabindex="1">
               <div class="card-item__content line-before">
                 <h3 class="card-item__title title  uppercase title--third">
                   BIOSTAT® B
@@ -131,12 +124,12 @@
                 <span class="card-item-bg"></span>
               </div>
 
-              <button class="cards__btn  btn btn--more">Подробнее</button>
+              <button class="cards__btn  btn btn--more" type="button">Подробнее</button>
             </article>
           </li>
 
-          <li class="cards__item card-item card-left" data-modal="modal3">
-            <article class="cards__article">
+          <li class="cards__item card-item card-left ">
+            <article class="cards__article js-modal-btn" data-modal="modal3" tabindex="1">
               <div class="card-item__content">
                 <h3 class="card-item__title title  uppercase title--third">
                   BIOSTAT® B-DCU II
@@ -154,14 +147,14 @@
                 </picture>
 
                 <span class="card-item-bg"></span>
-                <button class="cards__btn  btn btn--more">Подробнее</button>
+                <button class="cards__btn  btn btn--more" type="button">Подробнее</button>
               </div>
             </article>
             </a>
           </li>
 
-          <li class="cards__item card-item card-right" data-modal="modal4">
-            <article class="cards__article">
+          <li class="cards__item card-item card-right">
+            <article class="cards__article js-modal-btn" data-modal="modal4" tabindex="1">
               <div class="card-item__content line-before">
                 <h3 class="card-item__title title  uppercase title--third">
                   Сосуд UniVessel®
@@ -190,9 +183,9 @@
           </button>
         </div>
 
-        <div class=" catalog__wrapper">
-          <div class="catalog__slider hide-slider js-block-more " aria-hidden="true" id="slider">
-            <p class="catalog__text text text--small">
+        <div class="catalog__wrapper">
+          <div class="container-text hide-slider js-block-more " aria-hidden="true" id="slider">
+            <p class="text text--mg text--small">
               Компания Sartorius Stedim Biotech GmbH на протяжении более 40 лет является лидером в производстве и
               поставке
               лабораторных и пилотных ферментеров и биореакторов под брендом BIOSTAT®. Мы также оказываем техническую
@@ -209,7 +202,7 @@
               процессов.
             </p>
 
-            <p class="catalog__text text text--small">
+            <p class="text text--mg text--small">
               Sartorius предлагает разнообразные типы биореакторов, включая биореакторы для пилотных испытаний с
               возможностью
               стерилизации на месте, автоклавируемые, лабораторные модели и одноразовые биореакторы. Подробные
@@ -318,9 +311,9 @@
         <div class="modal-header__content modal-content">
           <div class="modal-content__top">
             <h4 class="modal__title title--blue title--fourth line-after uppercase">BIOSTAT® A</h4>
-            <button class="btn  btn--border btn--border-small">Заказать</button>
+            <a href="contacts.html" class="btn  btn--border btn--border-small" target="_blank">Заказать</a>
           </div>
-          <p class="modal-content__text text text-14">
+          <p class="modal-content__text modal__text text text-14">
             Новый лабораторный ферментер BIOSTAT® A - мини-модель из семейства ферментеров BIOSTAT®. Он предназначен для
             контроля
             роста клеток и ферментации и может быть использован в учебных целях. Управляющий блок BIOSTAT® A объединяет
@@ -335,7 +328,7 @@
       <div class="modal__body modal-body">
         <div class="modal-body__list-contain">
           <h5 class="modal-body__title title-fifth uppercase">Особенности:</h5>
-          <ul class="modal-body__list text text-14">
+          <ul class="modal-body__list text text-14 js-modal-list-hang">
             <li class="modal-body__item">Простая система аэрации</li>
             <li class="modal-body__item">Интуитивное управление как для новичков, так и для опытных
               пользователей
@@ -351,7 +344,7 @@
         </div>
         <div class="modal-body__list-contain">
           <h5 class="modal-body__title title-fifth uppercase">Области применения:</h5>
-          <ul class="modal-body__list text text-14">
+          <ul class="modal-body__list text text-14 js-modal-list-areas">
             <li class="modal-body__item">Микробиология: культивация бактерий, грибов и дрожжей</li>
             <li class="modal-body__item">Культуры клеток: выращивание клеток животных и растений
             </li>
