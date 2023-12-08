@@ -3,7 +3,7 @@
 // export const createCard = (link, title, subtitle, offers, image, image2) => {
 //   const cardTemplate = document.querySelector('#cardMainTemplate');
 //   const cloneCardTemplate = cardTemplate.content.cloneNode(true);
-  
+
 //   const cardLink = cloneCardTemplate.querySelector('.js-card-link');
 //   const cardTitle = cloneCardTemplate.querySelector('.js-card-title');
 //   const cardSubtitle = cloneCardTemplate.querySelector('.js-card-subtitle');
@@ -26,17 +26,17 @@
 
 // export const renderCardList = (cards) => {
 //   for (let item of cards) {
-//     const card = createCard(   
+//     const card = createCard(
 //      item.link,
 //      item.title,
 //      item.subtitle,
 //      item.offers,
 //      item.imageCard.sourceMax767,
 //      item.imageCard.sourceMin768,
-   
+
 //    );
 //     cardsContainer.append(card);
 //   }
 
 //   return cards;
-// } 
+// }

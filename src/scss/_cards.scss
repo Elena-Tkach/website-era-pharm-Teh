@@ -36,7 +36,12 @@
   z-index: 3;
   position: relative;
   transition: $trans-06;
-  @include box-shadow($x: 0, $y: 16px, $blur: 29px, $color: rgba(15, 28, 52, 0.25));
+  @include box-shadow(
+    $x: 0,
+    $y: 16px,
+    $blur: 29px,
+    $color: rgba(15, 28, 52, 0.25)
+  );
 }
 
 .card-offers {
