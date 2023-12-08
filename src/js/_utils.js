@@ -1,51 +1,34 @@
-export const showBlock = () => {
-  let previousActiveElement;
-  const showMoreBtnEl = document.querySelector('.js-btn-show-more');
-  const blockMoreEl = document.querySelector('.js-block-more');
-  const menuBtnOpenEl = document.querySelector('.js-btn-menu-open');
-  const navBlockEl = document.querySelector('.js-nav-block');
-  const closeMenuBtnEl = document.querySelector('.js-btn-close');
-  const overlay = document.querySelector('.js-overlay');
+export const modal = document.querySelector(".js-modal");
+export const navBlockEl = document.querySelector(".js-nav-block");
+export const closeMenuBtnEl = document.querySelector(".js-btn-close");
 
-  const toggleAccordeon = () => {
-    blockMoreEl.classList.toggle('show-slider');
-   
-    blockMoreEl.classList.contains('show') ? blockMoreEl.setAttribute('aria-hidden', 'false') : 
-      blockMoreEl.setAttribute('aria-hidden', 'true');
-    
-    blockMoreEl.classList.contains('show') ? showMoreBtnEl.setAttribute('aria-label', 'Закрыть блок') :
-       showMoreBtnEl.setAttribute('aria-label', 'Показать больше информации');
-    
-  };
+export const toggleAccordeon = (moreBtn, block) => {
+  block.classList.toggle("show-slider");
 
-
-  const showMenu = () => {
-    navBlockEl.classList.add('show'); 
-    overlay.classList.add('show');
-    document.body.classList.add('no-scroll');
-    previousActiveElement = document.activeElement;
-
-    
-   
-
-     setTimeout(() => {
-    closeMenuBtnEl.focus();
-  }, 100);
-
+  if (block.classList.contains("show-slider")) {
+    block.setAttribute("aria-hidden", "false");
+    moreBtn.setAttribute("aria-label", "Закрыть блок");
+    moreBtn.innerHTML = "Скрыть блок";
+  } else {
+    block.setAttribute("aria-hidden", "true");
+    moreBtn.setAttribute("aria-label", "Показать больше информации");
+    moreBtn.innerHTML = "Больше информации";
   }
-
-    const hideMenu = () => {
-      navBlockEl.classList.remove('show'); 
-      overlay.classList.remove('show');
-      document.body.classList.remove('no-scroll');
-      previousActiveElement.focus();
-
-  }
-
-
-  showMoreBtnEl.addEventListener('click', toggleAccordeon);
-  menuBtnOpenEl.addEventListener('click', showMenu);
-  closeMenuBtnEl.addEventListener('click', hideMenu);
-  overlay.addEventListener('click', hideMenu);
-
 };
+
+export const showBlock = (element, closeMenuBtn) => {
+  element.classList.add("show");
+  // previousActiveElement = document.activeElement;
+  element.setAttribute("aria-hidden", "false");
+
+  setTimeout(() => {
+    closeMenuBtn.focus();
+  }, 100);
+};
+
+export const hideBlock = (element) => {
+  element.classList.remove("show");
+  element.setAttribute("aria-hidden", "true");
+  // previousActiveElement.focus();
+};
+
