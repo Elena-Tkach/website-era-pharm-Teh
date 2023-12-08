@@ -62,9 +62,15 @@
   transition: $trans-06;
 }
 .search__dots {
+  text-align: left;
+  font-size: 14px;
   opacity: 1;
   visibility: visible;
   transition: $trans-06;
+}
+
+.wrapper--left {
+  width: 10%;
 }
 
 .search-item {
