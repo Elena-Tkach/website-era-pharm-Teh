@@ -1,12 +1,12 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const mode = process.env.NODE_ENV || 'development';
-const devMode = mode === 'development';
-const target = devMode ? 'web' : 'browserslist';
-const devtool = devMode ? 'source-map' : undefined;
+const mode = process.env.NODE_ENV || "development";
+const devMode = mode === "development";
+const target = devMode ? "web" : "browserslist";
+const devtool = devMode ? "source-map" : undefined;
 
 module.exports = {
   mode,
@@ -17,65 +17,90 @@ module.exports = {
     open: true,
     hot: true,
   },
-  entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'script.js')],
+  entry: ["@babel/polyfill", path.resolve(__dirname, "src", "script.js")],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-    filename: '[name].js',
-    assetModuleFilename: 'img/[name][ext]'
+    filename: "[name].js",
+    assetModuleFilename: "img/[name][ext]",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      template: path.resolve(__dirname, "src", "index.html"),
     }),
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'cards.html'),
-        filename: 'cards.html',
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "contacts.html"),
+      filename: "contacts.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "aboutus.html"),
+      filename: "aboutus.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "avtoclav.html"),
+      filename: "avtoclav.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "control.html"),
+      filename: "control.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "disposable.html"),
+      filename: "disposable.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "small.html"),
+      filename: "small.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "steril.html"),
+      filename: "steril.html",
+    }),
+
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: "[name].css",
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/img'),
-          to:   path.resolve(__dirname, 'dist/img')
-        }
-      ]
+          from: path.resolve(__dirname, "src/img"),
+          to: path.resolve(__dirname, "dist/img"),
+        },
+      ],
     }),
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        loader: "html-loader",
       },
       {
-          test: /\.(jpg|png|svg|jpeg|gif)$/,
-          type: 'asset/resource'
+        test: /\.(jpg|png|svg|jpeg|gif)$/,
+        type: "asset/resource",
       },
       {
         test: /\.(c|sa|sc)ss$/i,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [require('postcss-preset-env')],
+                plugins: [require("postcss-preset-env")],
               },
             },
           },
-          'sass-loader',
+          "sass-loader",
         ],
       },
       {
         test: /\.woff2?$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'fonts/[name][ext]'
-        }
+          filename: "fonts/[name][ext]",
+        },
       },
       // {
       //   test: /\.(jpe?g|png|webp|gif|svg)$/i,
@@ -108,9 +133,9 @@ module.exports = {
         test: /\.m?js$/i,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ["@babel/preset-env"],
           },
         },
       },

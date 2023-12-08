@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font">
-  <title>Сайт</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" />
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" />
+  <title>Ферментеры и биореакторы</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
           <picture>
             <source media="(max-width: 798px)" srcset="img/logo-150.png" />
             <source media="(min-width: 799px)" srcset="img/logo-180.png" />
-            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo">
+            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo" />
           </picture>
         </a>
 
@@ -27,29 +27,27 @@
             aria-controls="menu"></button>
         </div>
 
-
         <div class="header__nav nav-container bg-blue-main js-nav-block" id="menu" aria-hidden="true">
           <button class="nav__btn btn btn--close js-btn-close" aria-label="Закрыть меню" title="Закрыть меню"
             type="button"></button>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item nav-item nav-item--line  uppercase">
+              <li class="nav__item nav-item nav-item--line uppercase">
                 О нас
-                <a href="#" class="nav__link link--absolute link "></a>
+                <a href="aboutus.html" class="nav__link link--absolute link"></a>
               </li>
               <li class="nav__item nav-item nav-item--line uppercase">
                 Контакты
-                <a href="#" class="nav__link link--absolute link"></a>
+                <a href="contacts.html" class="nav__link link--absolute link"></a>
               </li>
 
               <li class="nav__item nav-item nav-item--line uppercase">
                 Каталог
-                <a href="#" class="nav__link link--absolute link"></a>
+                <a href="#catalog" class="nav__link link--absolute link"></a>
               </li>
             </ul>
           </nav>
         </div>
-
       </div>
     </div>
   </header>
@@ -59,14 +57,18 @@
       <div class="bg-intro intro-main"></div>
 
       <div class="intro__wrapper-text">
-        <p class="intro__subttitle subtitle subtitle--first">Sartorius Stedim Biotech GmbH</p>
-        <h1 class="intro__title title title--first  uppercase">Ферментеры и&nbsp;биореакторы</h1>
+        <p class="intro__subttitle subtitle subtitle--first">
+          Sartorius Stedim Biotech GmbH
+        </p>
+        <h1 class="intro__title title title--first uppercase">
+          Ферментеры и&nbsp;биореакторы
+        </h1>
       </div>
 
       <div class="intro__wrapper">
         <div class="search__wrapper">
-          <input class="intro__search  search js-search" type="text" placeholder="серия BIOSTAT®">
-          <button class="search__btn btn btn--icon search--icon js-search-btn" type="submit" title="Поиск"></button>
+          <input class="intro__search  search" type="text" placeholder="серия BIOSTAT®">
+          <button class="search__btn btn btn--icon search--icon" type="submit" title="Поиск"></button>
         </div>
 
         <ul class="serch__list seach-list js-product-search">
@@ -74,7 +76,7 @@
             <a href="#" class="search__link link js-search-link"># <span>BIOSTAT® A</span> </a>
           </li> -->
         </ul>
-        <div class="wrapper--left ">
+        <div class="wrapper--left">
           <p class="search__dots">...</p>
         </div>
       </div>
@@ -83,31 +85,37 @@
 
   <div class="vertival-line"></div>
 
-  <section class="catalog bg-light-grey">
+  <section class="catalog section bg-light-grey">
     <div class="container">
       <a id="catalog"></a>
-      <h2 class="catalog__title title title--second title--center uppercase">Каталог</h2>
+      <h2 class="catalog__title title title--second title--center uppercase">
+        Каталог
+      </h2>
       <ul class="catalog__icons icons icons--center">
         <li class="icons__item">
-          <button class="icons__btn btn btn--icons-cards selected" aria-label="Показать карточками" aria-current="true">
-          </button>
+          <button class="icons__btn btn btn--icons-cards selected js-btn-icon" aria-label="Показать карточками"
+            aria-current="true"></button>
         </li>
         <li class="icons__item">
-          <button class="icons__btn btn btn--icons-list" aria-label="Показать списком" aria-current="false">
-          </button>
+          <button class="icons__btn btn btn--icons-list js-btn-icon" aria-label="Показать списком"
+            aria-current="false"></button>
         </li>
       </ul>
 
-      <ul class="catalog__cards cards js-cards-main-contaier">
-        <!-- <li class="cards__item card-item">
-          <a href="#" class="cards__link link--cards">
+      <ul class="catalog__cards cards js-cards-contaier">
+        <li class="cards__item card-item card-left">
+          <a href="avtoclav.html" class="cards__link link--cards">
             <article class="cards__article">
               <div class="card-item__content line-before">
-                <h3 class="card-item__title title  uppercase title--third">
+                <h3 class="card-item__title title uppercase title--third">
                   Автоклавируемые
                 </h3>
-                <p class="card-item__subtitle subtitle subtitle--third line-before">лабораторные ферментеры</p>
-                <p class="card-item__offers card-offers uppercase">4 предложения</p>
+                <p class="card-item__subtitle subtitle subtitle--third line-before">
+                  лабораторные ферментеры
+                </p>
+                <p class="card-item__offers card-offers uppercase">
+                  4 предложения
+                </p>
               </div>
 
               <div class="card-item__bg-wrap">
@@ -115,51 +123,173 @@
                   <source media="(max-width: 767px)" srcset="img/bg-card-1-240.jpg" />
                   <source media="(min-width: 768px)" srcset="img/bg-card-1.jpg" />
                   <img src="img/bg-card-1.jpg" alt="Автоклавируемые лабораторные ферментеры"
-                    class="card-item__img card-img">
+                    class="card-item__img card-img" />
                 </picture>
 
                 <span class="card-item-bg"></span>
               </div>
 
-              <button class="cards__btn  btn btn--more">Подробнее</button>
+              <button class="cards__btn btn btn--more">Подробнее</button>
             </article>
           </a>
-        </li> -->
+        </li>
+
+        <li class="cards__item card-item card-right">
+          <a href="steril.html" class="cards__link link--cards">
+            <article class="cards__article">
+              <div class="card-item__content line-before">
+                <h3 class="card-item__title title uppercase title--third">
+                  Стерилизуемые
+                </h3>
+                <p class="card-item__subtitle subtitle subtitle--third line-before">
+                  на месте ферментеры
+                </p>
+                <p class="card-item__offers card-offers uppercase">
+                  2 предложения
+                </p>
+              </div>
+
+              <div class="card-item__bg-wrap">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/bg-card-2-240.jpg" />
+                  <source media="(min-width: 768px)" srcset="img/bg-card-2.jpg" />
+                  <img src="img/bg-card-1.jpg" alt="Автоклавируемые лабораторные ферментеры"
+                    class="card-item__img card-img" />
+                </picture>
+
+                <span class="card-item-bg"></span>
+              </div>
+
+              <button class="cards__btn btn btn--more">Подробнее</button>
+            </article>
+          </a>
+        </li>
+
+        <li class="cards__item card-item card-left">
+          <a href="small.html" class="cards__link link--cards">
+            <article class="cards__article">
+              <div class="card-item__content line-before">
+                <h3 class="card-item__title title uppercase title--third">
+                  Малогабаритные
+                </h3>
+                <p class="card-item__subtitle subtitle subtitle--third line-before">
+                  биореакторы
+                </p>
+                <p class="card-item__offers card-offers uppercase">
+                  4 предложения
+                </p>
+              </div>
+
+              <div class="card-item__bg-wrap">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/bg-card-3-240.jpg" />
+                  <source media="(min-width: 768px)" srcset="img/bg-card-3.jpg" />
+                  <img src="img/bg-card-1.jpg" alt="Малогабаритные биореакторы" class="card-item__img card-img" />
+                </picture>
+
+                <span class="card-item-bg"></span>
+              </div>
+
+              <button class="cards__btn btn btn--more">Подробнее</button>
+            </article>
+          </a>
+        </li>
+
+        <li class="cards__item card-item card-right">
+          <a href="disposable.html" class="cards__link link--cards">
+            <article class="cards__article">
+              <div class="card-item__content line-before">
+                <h3 class="card-item__title title uppercase title--third">
+                  Одноразовые
+                </h3>
+                <p class="card-item__subtitle subtitle subtitle--third line-before">
+                  ферментеры
+                </p>
+                <p class="card-item__offers card-offers uppercase">
+                  3 предложения
+                </p>
+              </div>
+
+              <div class="card-item__bg-wrap">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/bg-card-4-240.jpg" />
+                  <source media="(min-width: 768px)" srcset="img/bg-card-4.jpg" />
+                  <img src="img/bg-card-1.jpg" alt="Одноразовые ферментеры" class="card-item__img card-img" />
+                </picture>
+
+                <span class="card-item-bg"></span>
+              </div>
+
+              <button class="cards__btn btn btn--more">Подробнее</button>
+            </article>
+          </a>
+        </li>
+
+        <li class="cards__item card-item card-last">
+          <a href="control.html" class="cards__link link--cards">
+            <article class="cards__article">
+              <div class="card-item__content line-before">
+                <h3 class="card-item__title title uppercase title--third">
+                  Управление
+                </h3>
+                <p class="card-item__subtitle subtitle subtitle--third line-before">
+                  биореактором
+                </p>
+                <p class="card-item__offers card-offers uppercase">
+                  2 предложения
+                </p>
+              </div>
+
+              <div class="card-item__bg-wrap">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/bg-card-5-240.jpg" />
+                  <source media="(min-width: 768px)" srcset="img/bg-card-5.jpg" />
+                  <img src="img/bg-card-1.jpg" alt="Управление биореактором" class="card-item__img card-img" />
+                </picture>
+
+                <span class="card-item-bg"></span>
+              </div>
+
+              <button class="cards__btn btn btn--more">Подробнее</button>
+            </article>
+          </a>
+        </li>
       </ul>
 
       <div class="catalog__wrapper--btn wrapper-center">
-        <button type="button" class="btn catalog__btn btn--border js-btn-show-more " aria-controls="slider"
-          aria-label="Показать больше информации" type="button">Больше информации
+        <button type="button" class="btn catalog__btn btn--border js-btn-show-more" aria-controls="slider"
+          aria-label="Показать больше информации" type="button">
+          Больше информации
         </button>
       </div>
 
-      <div class=" catalog__wrapper">
-        <div class="catalog__slider hide-slider js-block-more " aria-hidden="true" id="slider">
-          <p class="catalog__text text text--small">
-            Компания Sartorius Stedim Biotech GmbH на протяжении более 40 лет является лидером в производстве и поставке
-            лабораторных и пилотных ферментеров и биореакторов под брендом BIOSTAT®. Мы также оказываем техническую
-            поддержку
-            фармацевтическим и биотехнологическим компаниям по всему миру. Серия ферментеров BIOSTAT® включает в себя
-            оборудование
-            для работы с микроорганизмами и культурами клеток. Оно охватывает широкий диапазон от компактных настольных
-            стандартных
-            моделей, готовых к использованию "прямо из коробки" (например, ферментеры серии BIOSTAT A), до сложных
-            промышленных
-            систем ферментации, требующих специального дизайна, настройки и конфигурации для выполнения сложных
-            ферментационных
-            процессов.
+      <div class="catalog__wrapper">
+        <div class="container-text hide-slider js-block-more" aria-hidden="true" id="slider">
+          <p class="text--mg text text--small">
+            Компания Sartorius Stedim Biotech GmbH на протяжении более 40 лет
+            является лидером в производстве и поставке лабораторных и пилотных
+            ферментеров и биореакторов под брендом BIOSTAT®. Мы также
+            оказываем техническую поддержку фармацевтическим и
+            биотехнологическим компаниям по всему миру. Серия ферментеров
+            BIOSTAT® включает в себя оборудование для работы с
+            микроорганизмами и культурами клеток. Оно охватывает широкий
+            диапазон от компактных настольных стандартных моделей, готовых к
+            использованию "прямо из коробки" (например, ферментеры серии
+            BIOSTAT A), до сложных промышленных систем ферментации, требующих
+            специального дизайна, настройки и конфигурации для выполнения
+            сложных ферментационных процессов.
           </p>
 
-          <p class="catalog__text text text--small">
-            Sartorius предлагает разнообразные типы биореакторов, включая биореакторы для пилотных испытаний с
-            возможностью
-            стерилизации на месте, автоклавируемые, лабораторные модели и одноразовые биореакторы. Подробные
-            характеристики вы
-            можете найти в нашем каталоге.
+          <p class="text--mg text text--small">
+            Sartorius предлагает разнообразные типы биореакторов, включая
+            биореакторы для пилотных испытаний с возможностью стерилизации на
+            месте, автоклавируемые, лабораторные модели и одноразовые
+            биореакторы. Подробные характеристики вы можете найти в нашем
+            каталоге.
           </p>
 
           <div class="catalog__wrapper--btn wrapper--left">
-            <button type="button" class="btn catalog__btn btn--border">Отправить запрос</button>
+            <a href="contacts.html" class="btn catalog__btn btn--border">Отправить запрос</a>
           </div>
         </div>
       </div>
@@ -173,24 +303,21 @@
       <a href="#" class="link-logo link-center">
         <picture>
           <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
-          <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
-          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo">
+          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo" />
         </picture>
       </a>
       <div class="footer__wrapper">
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class=" link"> О нас</a>
+              <a href="aboutus.html" class="link"> О нас</a>
             </li>
 
             <li class="nav__item">
-
-              <a href="#" class="link">Контакты</a>
+              <a href="contacts.html" class="link">Контакты</a>
             </li>
 
-            <li class="nav__item ">
-
+            <li class="nav__item">
               <a href="#catalog" class="link">Каталог</a>
             </li>
 
@@ -198,7 +325,9 @@
               <form action="" class="nav__form form form--footer">
                 <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
                   placeholder="Написать нам"></textarea>
-                <button class="form__btn btn btn--footer" type="submit">Отправить</button>
+                <button class="form__btn btn btn--footer" type="submit">
+                  Отправить
+                </button>
               </form>
             </li>
           </ul>
@@ -216,7 +345,9 @@
               <p class="address__text text--light">A15H8C3, Казахстан</p>
             </li>
             <li class="address__item">
-              <p class="address__text text--light">г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1</p>
+              <p class="address__text text--light">
+                г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1
+              </p>
             </li>
             <li class="address__item">
               <p class="address__text text--light">
@@ -240,14 +371,14 @@
   </footer>
 
   <template id="productSearchTemplate">
-    <li class="search__item search-item ">
+    <li class="search__item search-item">
       <a href="#" class="search__link link js-product-search-link">#
         <span class="js-product-search">BIOSTAT® A</span>
       </a>
     </li>
   </template>
 
-  <template id="cardMainTemplate">
+  <!-- <template id="cardMainTemplate">
     <li class="cards__item card-item">
       <a href="#" class="cards__link link--cards js-card-link">
         <article class="cards__article">
@@ -269,7 +400,7 @@
         </article>
       </a>
     </li>
-  </template>
+  </template> -->
 
   <div class="overlay js-overlay"></div>
 </body>

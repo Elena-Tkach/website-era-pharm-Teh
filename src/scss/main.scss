@@ -12,10 +12,22 @@
 .title--first {
   color: $main-color;
   @include font($weight: 500, $size: 2em);
+
+  &-s {
+    @include font($weight: 500, $size: 1.6em);
+    line-height: 1.5;
+  }
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .title--second {
   @include font($weight: 500, $size: 2em);
+  &-s {
+    @include font($weight: 500, $size: 1.8em);
+  }
 }
 
 .title--third {
@@ -30,6 +42,13 @@
   text-align: center;
 }
 
+.title--fourth {
+  @include font($weight: 700, $size: 20px);
+}
+.title-fifth {
+  @include font($weight: 500, $size: 14px);
+}
+
 .subtitle--third {
   @include font($weight: 500, $size: 1em);
 }
@@ -39,6 +58,18 @@
   @include font($weight: 400, $size: 1em);
 }
 
+.text-shadow {
+  text-shadow:
+    2px 0 #fff,
+    -2px 0 #fff,
+    0 2px #fff,
+    0 -2px #fff,
+    1px 1px #fff,
+    -1px -1px #fff,
+    1px -1px #fff,
+    -1px 1px #fff;
+}
+
 .btn {
   padding: 0;
   cursor: pointer;
@@ -46,39 +77,50 @@
   text-align: center;
 
   border: none;
+  border-radius: 2px;
   background-color: transparent;
-  transition: $trans-06;
+  transition: $trans-03;
 
   &--menu {
-    width: 55px;
+    width: 35px;
     height: 35px;
-    padding: 0 5px;
-    border: 1px solid transparent;
+    // padding: 5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
     background: url("./img/burger-icon.svg") no-repeat center;
-    background-size: 90%;
-    transition: $trans-06;
+    background-size: 35px;
+    transition: $trans-03;
 
     &:hover,
     &:focus {
-      width: 55px;
+      width: 35px;
       height: 35px;
-      border: 1px solid $blue-overlay;
+      border: 2px solid $blue-overlay;
       background: url("./img/burger-icon-blue.svg") no-repeat center;
-      background-size: 90%;
+      background-size: 30px;
     }
   }
 
   &--close {
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    border: 1px solid transparent;
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+    border: 2px solid $light-grey;
+    border-radius: 50%;
+
     background: url("./img/close-icon-white.svg") no-repeat;
     background-size: contain;
 
     &:hover,
     &:focus {
-      border: 1px solid $light-grey;
+      opacity: 0.8;
+      transform: rotate(90deg);
+      border: 2px solid $light-grey;
+    }
+
+    &-blue {
+      background: url("./img/close-blue.svg") no-repeat;
+      background-size: contain;
     }
   }
 
@@ -98,6 +140,11 @@
       color: $main-color;
       border: 3px solid $blue-overlay;
     }
+
+    &-small {
+      font-size: 12px;
+      padding: 6px 35px;
+    }
   }
 
   &--more {
@@ -105,17 +152,16 @@
     @include font($size: 14px);
     padding: 5px 35px;
     border: 3px solid $light-grey;
-
-    &:hover,
-    &:focus {
-      color: $grey;
-      border: 3px solid $main-color;
-    }
+    pointer-events: none;
   }
 }
 
 .bg-intro {
+  z-index: 2;
+  position: absolute;
   background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
 }
 
 .link {
@@ -138,6 +184,7 @@
   &-center {
     display: flex;
     align-items: center;
+
     justify-content: center;
   }
 
@@ -160,10 +207,25 @@
     top: 0;
     left: 50%;
     width: 3px;
-    height: 100px;
+    height: 70px;
     background-color: $main-color;
     position: absolute;
-    transform: translate3d(0, -50px, 0);
+    transform: translate3d(0, -35px, 0);
+  }
+}
+.line-after {
+  z-index: 5;
+  position: relative;
+  padding: 20px 0;
+
+  &::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: $main-color;
+    position: absolute;
   }
 }
 
@@ -172,10 +234,15 @@
     opacity: 0.8;
     @include font($size: 14px);
   }
+
+  &-14 {
+    @include font($weight: 300, $size: 12px);
+    line-height: 1.4;
+  }
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 0;
   right: 0;
@@ -183,7 +250,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: $blue-overlay;
+  background-color: transparent;
 
   opacity: 0;
   visibility: hidden;
@@ -194,52 +261,41 @@
 }
 
 .wrapper-center {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .hide-slider {
-  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-  max-height: 0px;
+  max-height: 0;
+  transition: $trans-03;
 }
 
 .show-slider {
-  transition: max-height 1s;
-  max-height: 3000px;
+  max-height: 1000px;
+  transition: $trans-03;
 }
 
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -100%, 0);
+  transition: $trans-06;
+}
 .show {
   opacity: 1;
   visibility: visible;
   transform: translate3d(0, 0, 0);
 }
 
-// @keyframes show {
+// @keyframes position_hidden {
 //   0% {
-//     transform: scaleY(0);
+//     position: static;
+//   }
+//   99% {
+//     position: static;
 //   }
 //   100% {
-//     transform: scaleY(1);
+//     position: absolute;
+//     top: -100%;
 //   }
 // }
-
-// @keyframes hide {
-//   0% {
-//     transform: scaleY(1);
-//   }
-//   100% {
-//     transform: scaleY(0);
-//   }
-// }
-
-@keyframes position_hidden {
-  0% {
-    position: static;
-  }
-  99% {
-    position: static;
-  }
-  100% {
-    position: absolute;
-    top: -100%;
-  }
-}

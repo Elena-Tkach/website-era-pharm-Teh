@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  transition: $trans-06;
 
   padding: 0;
   margin-bottom: 100px;
@@ -12,6 +13,7 @@
 .cards__item {
   position: relative;
   margin-bottom: 90px;
+  transition: $trans-06;
 
   &:last-child {
     margin-bottom: 0;
@@ -21,24 +23,59 @@
 .card-item__content {
   z-index: 5;
   position: absolute;
+  transition: $trans-06;
 }
 
 .card-item__bg-wrap {
   z-index: 3;
   position: relative;
+  transition: $trans-06;
 }
 
 .card-img {
   z-index: 3;
   position: relative;
   transition: $trans-06;
-  @include box-shadow($x: 0, $y: 16px, $blur: 29px, $color: rgba(15, 28, 52, 0.25));
+  @include box-shadow(
+    $x: 0,
+    $y: 16px,
+    $blur: 29px,
+    $color: rgba(15, 28, 52, 0.25)
+  );
 }
 
 .card-offers {
+  pointer-events: none;
+  position: relative;
+  display: inline-block;
+  transition: $trans-06;
+
   color: $white;
   @include font($weight: 700, $size: 14px);
-  position: relative;
+
+  transition: $trans-06;
+  transform: translate3d(50px, 50px, 0);
+
+  &::after {
+    transition: $trans-06;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 150px;
+    height: 3px;
+    background-color: $main-color;
+
+    transform: translate3d(10px, -50px, 0);
+  }
+
+  &--block {
+    width: 50%;
+
+    &::after {
+      bottom: 50%;
+    }
+  }
 }
 
 .cards__btn {
@@ -52,19 +89,14 @@
 
 .card-item {
   transition: $trans-06;
-  &__subtitle {
-    margin-bottom: 25px;
+
+  &__title {
+    transition: $trans-06;
   }
 
-  &__offers {
-    &::after {
-      content: "";
-      width: 150px;
-      height: 3px;
-      background-color: $main-color;
-      position: absolute;
-      bottom: 0;
-    }
+  &__subtitle {
+    margin-bottom: 25px;
+    transition: $trans-06;
   }
 
   &__content {
@@ -73,37 +105,195 @@
     transform: translate3d(10px, 40px, 0);
   }
 
-  &:nth-child(2n + 1) {
-    .card-item__content {
-      left: 0;
-    }
-
-    .cards__btn {
-      left: 50%;
-    }
-  }
-
-  &:nth-child(2n) {
-    .cards__btn {
-      left: 20%;
-    }
-  }
-  &__offers {
-    transition: $trans-06;
-    transform: translate3d(50px, 50px, 0);
-
-    &::after {
-      left: 0;
-      transform: translate3d(10px, -50px, 0);
-    }
-  }
-
   &__subtitle {
     transition: $trans-06;
     color: $light-grey;
   }
 }
 
+.card-item {
+  cursor: pointer;
+  &:hover {
+    .card-item__title {
+      color: $main-color;
+      text-shadow:
+        1px 0 #fff,
+        -1px 0 #fff,
+        0 1px #fff,
+        0 -1px #fff,
+        1px 1px #fff,
+        -1px -1px #fff,
+        1px -1px #fff,
+        -1px 1px #fff;
+    }
+    .card-img {
+      box-shadow: none;
+    }
+  }
+}
+
+.card-left {
+  .card-item__content {
+    left: 0;
+  }
+
+  .cards__btn {
+    left: 50%;
+  }
+}
+
+.card-right {
+  .cards__btn {
+    left: 20%;
+  }
+}
+
 .card-item-bg {
   transition: $trans-06;
 }
+
+.card-item__bg-wrap {
+  pointer-events: none;
+}
+
+// @include laptopM-1200 {
+//   .card-list {
+//     justify-content: space-between;
+
+//     .card-item {
+//       background-color: $white;
+//       width: 80%;
+//       margin-right: 0;
+//       transition: $trans-06;
+
+//       box-shadow: 0 1px 20px 0 rgba(15, 27, 49, 0.167);
+
+//       &:hover {
+//         box-shadow: none;
+
+//         .cards__btn {
+//           opacity: 1;
+//           bottom: 28%;
+
+//           border-color: $main-color;
+//         }
+//       }
+//     }
+
+//     .cards__article {
+//       display: flex;
+//       flex-direction: row-reverse;
+//       align-items: center;
+//       justify-content: flex-end;
+//       transition: $trans-06;
+//     }
+//     .card-item__content {
+//       position: relative;
+//       transform: translate3d(0, 0, 0);
+//       transition: $trans-06;
+//     }
+
+//     .card-offers {
+//       transition: $trans-06;
+//       color: $black;
+//       width: 100%;
+//     }
+
+//     .card-offers::after {
+//       bottom: 0;
+//       background-color: $main-color;
+//       transition: $trans-06;
+//     }
+
+//     .card-right {
+//       margin-left: 20%;
+
+//       .card-item__bg-wrap {
+//         padding-right: 0;
+//       }
+//       .cards__article {
+//         flex-direction: row;
+//       }
+
+//       .card-item__content {
+//         margin-right: 30px;
+//         text-align: end;
+//       }
+
+//       .cards__btn {
+//         left: 60%;
+//         transform: translate3d(100%, -30px, 0);
+//       }
+//       .card-offers {
+//         transform: translate3d(0, 25px, 0);
+//       }
+//       .card-offers::after {
+//         left: 50%;
+//         transform: translate3d(50px, -30px, 0);
+//       }
+//     }
+
+//     .card-left {
+//       .card-item__content {
+//         margin-left: 30px;
+//       }
+//       .card-item__bg-wrap {
+//         padding-left: 0;
+//       }
+
+//       .card-offers {
+//         transform: translate3d(0, 25px, 0);
+//       }
+//       .cards__btn {
+//         left: 30%;
+//         transform: translate3d(0, -30px, 0);
+//       }
+//       .card-offers::after {
+//         transform: translate3d(-100px, -30px, 0);
+//         transition: $trans-06;
+//       }
+//     }
+
+//     .cards__btn {
+//       opacity: 1;
+//       transition: $trans-06;
+//     }
+
+//     .card-left:hover {
+//       .card-item__content {
+//         transform: translate3d(20px, 0, 0);
+//       }
+//       .cards__btn {
+//         transform: translate3d(0, -30px, 0);
+//       }
+
+//       .card-offers::after {
+//         transform: translate3d(0, -30px, 0);
+//       }
+//     }
+
+//     .card-right:hover {
+//       .cards__btn {
+//         left: 60%;
+//         transform: translate3d(100%, -30px, 0);
+//       }
+
+//       .card-item__content {
+//         transform: translate3d(-20px, 0px, 0);
+//       }
+
+//       .card-offers::after {
+//         transform: translate3d(65px, -30px, 0);
+//       }
+//     }
+
+//     .card-img {
+//       height: 100%;
+//       vertical-align: bottom;
+//       box-shadow: none;
+//     }
+//     .card-item-bg {
+//       display: none;
+//     }
+//   }
+// }

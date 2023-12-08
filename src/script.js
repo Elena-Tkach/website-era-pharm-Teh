@@ -1,5 +1,12 @@
-import './index.html';
-import './cards.html';
-import './style.scss';
+import "./index.html";
+import "./contacts.html";
+import "./aboutus.html";
+import "./avtoclav.html";
+import "./control.html";
+import "./disposable.html";
+import "./steril.html";
+import "./small.html";
 
-import './js/index';
+import "./style.scss";
+
+import "./js/index";
