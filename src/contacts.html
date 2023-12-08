@@ -62,7 +62,7 @@
       <section class="intro">
         <div class="bg-intro intro-сontact"></div>
         <div class="intro__wrapper-text">
-          <h1 class="intro__title title title--first title--first-s  uppercase">Контакты</h1>
+          <h1 class="intro__title title title--first title--first  uppercase">Контакты</h1>
         </div>
       </section>
     </div>
@@ -87,32 +87,39 @@
               </li>
               <li class="address__item">
                 <p class="address__text text--light">
-                  <span class="uppercase">Тел.:</span>
+                  <span class="uppercase title--blue">Тел.:</span>
                   <a class="link" href="tel:+77760076373" intemprop="telephone">+7 (776) 007-63-73</a>
                 </p>
               </li>
               <li class="address__item">
                 <p class="address__text text--light">
-                  <span class="uppercase">E-mail:</span>
+                  <span class="uppercase title--blue">E-mail:</span>
                   <a itemprop="email" href="mailto:info@era-metal.kz" class="link">info@era-metal.kz</a>
                 </p>
               </li>
             </ul>
           </div>
 
-          <form action="#" class="contact-form">
-            <fieldset class="form-fieldset">
-              <input type="text" class="contact-input input" placeholder="ФИ*">
-              <input type="text" class="contact-input input" placeholder="Телефон*">
-              <input type="text" class="contact-input input" placeholder="Email*">
-              </а>
-              <div class="text-center text-secondary mb-3"><small>*Обязательнo к заполнению</small></div>
+          <div class="section__form">
+            <h2 class="title-mg title--blue title--fourth uppercase">Отправить запрос</h2>
+            <form action="#" class="contact-form">
+              <fieldset class="form__fieldset">
+                <input type="text" class="contact-input input input--mg" placeholder="ФИО*" required>
+                <input type="text" class="contact-input input input--mg" placeholder="Телефон*" required>
+                <input type="text" class="contact-input input" placeholder="Email*">
+              </fieldset>
+
               <button class="form-btn btn btn--border">Отправить запрос</button>
-          </form>
+              <div class="text-center text-secondary mb-3"><small>*Обязательнo к заполнению</small></div>
+            </form>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <div class="vertival-line"></div>
 
   <footer class="footer">
     <div class="container">
@@ -127,18 +134,21 @@
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class=" link"> О нас</a>
+              <a href="index.html" class=" link">Главная</a>
+            </li>
+            <li class="nav__item ">
+              <a href="index.html#catalog" class="link">Каталог</a>
             </li>
 
             <li class="nav__item">
+              <a href="aboutus.html" class=" link"> О нас</a>
+            </li>
 
+            <li class="nav__item active-item">
               <a href="#" class="link">Контакты</a>
             </li>
 
-            <li class="nav__item ">
 
-              <a href="#catalog" class="link">Каталог</a>
-            </li>
 
             <li class="nav__item">
               <form action="" class="nav__form form form--footer">

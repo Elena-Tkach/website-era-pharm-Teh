@@ -76,6 +76,7 @@
     padding: 5px;
     outline: none;
     resize: vertical;
+    border-radius: 2px;
     transition: $trans-06;
     @include font($size: 14px);
     &:hover,
@@ -84,4 +85,38 @@
       border: 1px solid $main-color;
     }
   }
+
+  &__fieldset {
+    padding: 0;
+    border: none;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-input {
+  width: 100%;
+}
+
+.input {
+  height: 30px;
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 2px;
+  transition: $trans-06;
+  border: 1px solid $main-color;
+
+  @include font($size: 14px);
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $blue-overlay;
+  }
+
+  &--mg {
+    margin-bottom: 20px;
+  }
+}
+
+.form-btn {
+  font-size: 14px;
 }

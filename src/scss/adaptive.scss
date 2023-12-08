@@ -15,6 +15,21 @@
   .cards {
     padding: 0 15%;
   }
+
+  .form__textarea {
+    width: 60%;
+  }
+
+  .form--footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contact-input {
+    width: 70%;
+  }
 }
 
 //-------------------768----------------------------------------------------------------------
@@ -164,7 +179,6 @@
 
   .form--footer {
     padding-top: 0;
-    display: flex;
   }
 
   .btn--footer {
@@ -408,6 +422,38 @@
       @include font($size: 14px);
       line-height: 1.6;
     }
+  }
+
+  .section__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .section__form {
+    padding-left: 15%;
+  }
+
+  .contact-address {
+    text-align: start;
+  }
+
+  .form-btn {
+    width: 70%;
+  }
+  .form--footer {
+    align-items: flex-start;
+  }
+
+  .form__textarea {
+    margin-bottom: 5px;
+  }
+  .footer__address {
+    text-align: end;
+  }
+
+  .contact-address {
+    margin-bottom: 0;
   }
 }
 

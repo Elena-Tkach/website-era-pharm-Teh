@@ -107,9 +107,6 @@
     padding-top: 100px;
   }
 
-  // &__text {
-  //   margin-bottom: 50px;
-  // }
   &__wrapper--btn {
     display: flex;
   }
@@ -136,6 +133,7 @@
 }
 
 .address {
+  text-align: center;
   &__list {
     @include list-reset;
   }
@@ -145,4 +143,20 @@
       margin-bottom: 0;
     }
   }
+}
+
+.section__container {
+  text-align: center;
+}
+
+.contact-address {
+  margin-bottom: 50px;
+}
+
+.title-mg {
+  margin-bottom: 30px;
+}
+
+.nav__form {
+  margin-top: 30px;
 }
