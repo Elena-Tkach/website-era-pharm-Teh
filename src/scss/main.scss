@@ -286,16 +286,7 @@
   visibility: visible;
   transform: translate3d(0, 0, 0);
 }
-
-// @keyframes position_hidden {
-//   0% {
-//     position: static;
-//   }
-//   99% {
-//     position: static;
-//   }
-//   100% {
-//     position: absolute;
-//     top: -100%;
-//   }
-// }
+.shoe {
+  padding: 29px;
+  margin: 8px;
+}

@@ -24,19 +24,19 @@
 //   return cloneCardTemplate;
 // };
 
-export const renderCardList = (cards) => {
-  for (let item of cards) {
-    const card = createCard(   
-     item.link,
-     item.title,
-     item.subtitle,
-     item.offers,
-     item.imageCard.sourceMax767,
-     item.imageCard.sourceMin768,
-   
-   );
-    cardsContainer.append(card);
-  }
+// export const renderCardList = (cards) => {
+//   for (let item of cards) {
+//     const card = createCard(
+//      item.link,
+//      item.title,
+//      item.subtitle,
+//      item.offers,
+//      item.imageCard.sourceMax767,
+//      item.imageCard.sourceMin768,
 
-  return cards;
-} 
+//    );
+//     cardsContainer.append(card);
+//   }
+
+//   return cards;
+// }

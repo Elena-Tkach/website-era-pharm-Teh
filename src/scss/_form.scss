@@ -47,12 +47,24 @@
   @include list-reset;
   overflow: hidden;
   max-height: 60px;
+  transition: $trans-06;
 }
 .search__item {
   margin-bottom: 15px;
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.scrolling {
+  overflow: auto;
+  max-height: 100px;
+  transition: $trans-06;
+}
+.search__dots {
+  opacity: 1;
+  visibility: visible;
+  transition: $trans-06;
 }
 
 .search-item {
