@@ -455,6 +455,24 @@
   .contact-address {
     margin-bottom: 0;
   }
+
+  .active-item {
+    &::after {
+      right: 5px;
+      background-color: #bcbde9;
+    }
+
+    &:nth-child(2n) {
+      padding-left: 95px;
+      &::after {
+        left: 5px;
+        background-color: #bcbde9;
+      }
+    }
+
+    color: #bcbde9;
+    padding-left: 5px;
+  }
 }
 
 //-------------------992---------------------------------------------------------------

@@ -32,33 +32,3 @@ export const hideBlock = (element) => {
   // previousActiveElement.focus();
 };
 
-// document.body.addEventListener('click', event => {
-
-//   if (event.target.classList.contains('js-btn-show-more')) {
-//     toggleAccordeon(showMoreBtnEl, blockMoreEl);
-//   }
-
-//   if (event.target.classList.contains('js-btn-menu-open')) {
-//     showMenu(navBlockEl, closeMenuBtnEl);
-
-//   }
-
-//   if (event.target.classList.contains('js-btn-close')) {
-//     hideMenu(navBlockEl);
-
-//   }
-
-//   // if (event.target.classList.contains('cards__article')) {
-//   //   if (navBlockEl) {
-//   //     hideMenu(navBlockEl);
-//   //   }
-
-//   //   showMenu(modal, closeMenuBtnEl);
-//   //   document.body.classList.add('no-scroll');
-//   // }
-
-//   // if (event.target.classList.contains('js-btn-modal-close') || event.target.classList.contains('modal')) {
-//   //   hideMenu(modal);
-//   //   document.body.classList.remove('no-scroll');
-//   // }
-// })

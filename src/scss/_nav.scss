@@ -113,3 +113,15 @@
     }
   }
 }
+
+.active-item {
+  &::after {
+    background-color: #bcbde9;
+  }
+  &:nth-child(2n) {
+    &::after {
+      background-color: #bcbde9;
+    }
+  }
+  color: #bcbde9;
+}

@@ -1,236 +1,77 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" />
-    <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" />
-    <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" />
-    <title>Каталог товара</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <a href="#" class="link-logo">
-            <picture>
-              <source media="(max-width: 798px)" srcset="img/logo-150.png" />
-              <source media="(min-width: 799px)" srcset="img/logo-180.png" />
-              <img
-                src="img/logo-180.png"
-                alt="Логотип компании"
-                class="header__logo"
-              />
-            </picture>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" />
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" />
+  <title>Каталог товара</title>
+</head>
 
-          <div class="header__wrap">
-            <button
-              class="btn btn--menu js-btn-menu-open"
-              aria-label="Открыть меню"
-              title="Открыть меню"
-              type="button"
-              aria-controls="menu"
-            ></button>
-          </div>
-
-          <div
-            class="header__nav nav-container bg-blue-main js-nav-block"
-            id="menu"
-            aria-hidden="true"
-          >
-            <button
-              class="nav__btn btn btn--close js-btn-close"
-              aria-label="Закрыть меню"
-              title="Закрыть меню"
-              type="button"
-            ></button>
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item nav-item nav-item--line uppercase">
-                  Главная
-                  <a
-                    href="index.html"
-                    class="nav__link link--absolute link"
-                  ></a>
-                </li>
-                <li class="nav__item nav-item nav-item--line uppercase">
-                  Каталог
-                  <a
-                    href="index.html"
-                    class="nav__link link--absolute link"
-                  ></a>
-                </li>
-                <li class="nav__item nav-item nav-item--line uppercase">
-                  О нас
-                  <a
-                    href="aboutus.html"
-                    class="nav__link link--absolute link"
-                  ></a>
-                </li>
-                <li
-                  class="nav__item nav-item nav-item--line uppercase active-item"
-                >
-                  Контакты
-                  <a
-                    href="contacts.html"
-                    class="nav__link link--absolute link"
-                  ></a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="main-page">
-      <div class="container">
-        <section class="intro">
-          <div class="bg-intro intro-сontact"></div>
-          <div class="intro__wrapper-text">
-            <h1 class="intro__title title title--first title--first uppercase">
-              Контакты
-            </h1>
-          </div>
-        </section>
-      </div>
-
-      <div class="vertival-line"></div>
-      <section class="section about-text bg-light-grey">
-        <div class="container">
-          <div class="section__container">
-            <div class="contact-address">
-              <ul class="address__list">
-                <li class="address__item">
-                  <p class="addresss__text text--light">
-                    <span class="uppercase">БИН:</span>
-                    200940009126
-                  </p>
-                </li>
-                <li class="address__item">
-                  <p class="address__text text--light">A15H8C3, Казахстан</p>
-                </li>
-                <li class="address__item">
-                  <p class="address__text text--light">
-                    г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1
-                  </p>
-                </li>
-                <li class="address__item">
-                  <p class="address__text text--light">
-                    <span class="uppercase title--blue">Тел.:</span>
-                    <a
-                      class="link"
-                      href="tel:+77760076373"
-                      intemprop="telephone"
-                      >+7 (776) 007-63-73</a
-                    >
-                  </p>
-                </li>
-                <li class="address__item">
-                  <p class="address__text text--light">
-                    <span class="uppercase title--blue">E-mail:</span>
-                    <a
-                      itemprop="email"
-                      href="mailto:info@era-metal.kz"
-                      class="link"
-                      >info@era-metal.kz</a
-                    >
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <div class="section__form">
-              <h2 class="title-mg title--blue title--fourth uppercase">
-                Отправить запрос
-              </h2>
-              <form action="#" class="contact-form">
-                <fieldset class="form__fieldset">
-                  <input
-                    type="text"
-                    class="contact-input input input--mg"
-                    placeholder="ФИО*"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="contact-input input input--mg"
-                    placeholder="Телефон*"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="contact-input input"
-                    placeholder="Email*"
-                  />
-                </fieldset>
-
-                <button class="form-btn btn btn--border">
-                  Отправить запрос
-                </button>
-                <div class="text-center text-secondary mb-3">
-                  <small>*Обязательнo к заполнению</small>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="vertival-line"></div>
-
-    <footer class="footer">
-      <div class="container">
-        <a href="#" class="link-logo link-center">
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="#" class="link-logo">
           <picture>
-            <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
-            <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
-            <img
-              src="img/logo-icon-80.svg"
-              alt="Логотип компании"
-              class="header__logo"
-            />
+            <source media="(max-width: 798px)" srcset="img/logo-150.png" />
+            <source media="(min-width: 799px)" srcset="img/logo-180.png" />
+            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo" />
           </picture>
         </a>
-        <div class="footer__wrapper">
-          <nav class="footer__nav nav">
+
+        <div class="header__wrap">
+          <button class="btn btn--menu js-btn-menu-open" aria-label="Открыть меню" title="Открыть меню" type="button"
+            aria-controls="menu"></button>
+        </div>
+
+        <div class="header__nav nav-container bg-blue-main js-nav-block" id="menu" aria-hidden="true">
+          <button class="nav__btn btn btn--close js-btn-close" aria-label="Закрыть меню" title="Закрыть меню"
+            type="button"></button>
+          <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item">
-                <a href="index.html" class="link">Главная</a>
+              <li class="nav__item nav-item nav-item--line uppercase">
+                Главная
+                <a href="index.html" class="nav__link link--absolute link"></a>
               </li>
-              <li class="nav__item">
-                <a href="index.html#catalog" class="link">Каталог</a>
+              <li class="nav__item nav-item nav-item--line uppercase">
+                Каталог
+                <a href="index.html" class="nav__link link--absolute link"></a>
               </li>
-
-              <li class="nav__item">
-                <a href="aboutus.html" class="link"> О нас</a>
+              <li class="nav__item nav-item nav-item--line uppercase">
+                О нас
+                <a href="aboutus.html" class="nav__link link--absolute link"></a>
               </li>
-
-              <li class="nav__item active-item">
-                <a href="#" class="link">Контакты</a>
-              </li>
-
-              <li class="nav__item">
-                <form action="" class="nav__form form form--footer">
-                  <textarea
-                    class="form__textarea"
-                    name="footer-message"
-                    cols="20"
-                    rows="1"
-                    placeholder="Написать нам"
-                  ></textarea>
-                  <button class="form__btn btn btn--footer" type="submit">
-                    Отправить
-                  </button>
-                </form>
+              <li class="nav__item nav-item nav-item--line uppercase active-item">
+                Контакты
+                <a href="contacts.html" class="nav__link link--absolute link"></a>
               </li>
             </ul>
           </nav>
+        </div>
+      </div>
+    </div>
+  </header>
 
-          <address class="footer__address address">
+  <main class="main-page">
+    <div class="container">
+      <section class="intro">
+        <div class="bg-intro intro-сontact"></div>
+        <div class="intro__wrapper-text">
+          <h1 class="intro__title title title--first title--first uppercase">
+            Контакты
+          </h1>
+        </div>
+      </section>
+    </div>
+
+    <div class="vertival-line"></div>
+    <section class="section about-text bg-light-grey">
+      <div class="container">
+        <div class="section__container">
+          <div class="contact-address">
             <ul class="address__list">
               <li class="address__item">
                 <p class="addresss__text text--light">
@@ -248,34 +89,122 @@
               </li>
               <li class="address__item">
                 <p class="address__text text--light">
-                  <span class="uppercase">Тел.:</span>
-                  <a class="link" href="tel:+77760076373" intemprop="telephone"
-                    >+7 (776) 007-63-73</a
-                  >
+                  <span class="uppercase title--blue">Тел.:</span>
+                  <a class="link" href="tel:+77760076373" intemprop="telephone">+7 (776) 007-63-73</a>
                 </p>
               </li>
               <li class="address__item">
                 <p class="address__text text--light">
-                  <span class="uppercase">E-mail:</span>
-                  <a
-                    itemprop="email"
-                    href="mailto:info@era-metal.kz"
-                    class="link"
-                    >info@era-metal.kz</a
-                  >
+                  <span class="uppercase title--blue">E-mail:</span>
+                  <a itemprop="email" href="mailto:info@era-metal.kz" class="link">info@era-metal.kz</a>
                 </p>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__wrapper--center wrapper-center">
-          <small class="text--light"
-            >© <span>2023</span> TOO «Era Metal»</small
-          >
+          </div>
+
+          <div class="section__form">
+            <h2 class="title-mg title--blue title--fourth uppercase">
+              Отправить запрос
+            </h2>
+            <form action="#" class="contact-form">
+              <fieldset class="form__fieldset">
+                <input type="text" class="contact-input input input--mg" placeholder="ФИО*" required />
+                <input type="text" class="contact-input input input--mg" placeholder="Телефон*" required />
+                <input type="text" class="contact-input input" placeholder="Email*" />
+              </fieldset>
+
+              <button class="form-btn btn btn--border">
+                Отправить запрос
+              </button>
+              <div class="text-center text-secondary mb-3">
+                <small>*Обязательнo к заполнению</small>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <div class="overlay js-overlay"></div>
-  </body>
+  <div class="vertival-line"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="#" class="link-logo link-center">
+        <picture>
+          <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
+          <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
+          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo" />
+        </picture>
+      </a>
+      <div class="footer__wrapper">
+        <nav class="footer__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#catalog" class="link">Каталог</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="aboutus.html" class="link"> О нас</a>
+            </li>
+
+            <li class="nav__item active-item">
+              <a href="#" class="link">Контакты</a>
+            </li>
+
+            <li class="nav__item">
+              <form action="" class="nav__form form form--footer">
+                <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
+                  placeholder="Написать нам"></textarea>
+                <button class="form__btn btn btn--footer" type="submit">
+                  Отправить
+                </button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+
+        <address class="footer__address address">
+          <ul class="address__list">
+            <li class="address__item">
+              <p class="addresss__text text--light">
+                <span class="uppercase">БИН:</span>
+                200940009126
+              </p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">A15H8C3, Казахстан</p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">
+                г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1
+              </p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">
+                <span class="uppercase">Тел.:</span>
+                <a class="link" href="tel:+77760076373" intemprop="telephone">+7 (776) 007-63-73</a>
+              </p>
+            </li>
+            <li class="address__item">
+              <p class="address__text text--light">
+                <span class="uppercase">E-mail:</span>
+                <a itemprop="email" href="mailto:info@era-metal.kz" class="link">info@era-metal.kz</a>
+              </p>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="footer__wrapper--center wrapper-center">
+        <small class="text--light">© <span>2023</span> TOO «Era Metal»</small>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay js-overlay"></div>
+</body>
+
 </html>
