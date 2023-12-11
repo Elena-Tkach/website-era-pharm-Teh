@@ -1,30 +1,33 @@
-const searchInput = document.querySelector('.js-search');
+export const searchInput = document.querySelector('.js-search');
 const searchList = document.querySelector('.js-product-search');
 const searchItems = Array.from(document.querySelectorAll('.js-search-link'));
 const searchDots = document.querySelector('.search__dots');
 
-const textContent = (element, style, text) => {
+const textContent = (el, style, text) => {
+  const tag = el;
   if (style) {
-    element.style.cssText = `${style}`;
+    tag.style.cssText = `${style}`;
   }
   if (text) {
-    element.innerHTML = `${text}`;
+    tag.innerHTML = `${text}`;
   }
-
-  
-}
-const filterProduct = () => {
+};
+export const filterProduct = () => {
   searchInput.addEventListener('input', () => {
     const searchText = searchInput.value.toLowerCase();
-    const filteredItems = searchItems.filter((item) => item.textContent.toLowerCase().includes(searchText));
+    const filteredItems = searchItems.filter(
+      (item) => item.textContent.toLowerCase().includes(searchText)
+    );
     if (searchText === 0) {
       document.querySelector('.search__dots').innerHTML = 'Ничего не найденно!';
     }
-    searchItems.forEach((item) => {
+    searchItems.forEach((el) => {
+      const item = el;
       item.parentElement.style.display = 'none';
     });
-    filteredItems.forEach((item) => {
-      item.parentElement.style.display = 'list-item';
+    filteredItems.forEach((el) => {
+      const filteritem = el;
+      filteritem.parentElement.style.display = 'list-item';
     });
 
     if (filteredItems.length > 2) {
@@ -45,5 +48,3 @@ const filterProduct = () => {
     }
   });
 };
-
-export default filterProduct;

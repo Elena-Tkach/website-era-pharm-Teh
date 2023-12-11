@@ -84,7 +84,7 @@
   &--menu {
     width: 35px;
     height: 35px;
-    // padding: 5px;
+    position: relative;
     border-radius: 50%;
     border: 2px solid transparent;
     background: url("./img/burger-icon.svg") no-repeat center;
@@ -98,6 +98,19 @@
       border: 2px solid $blue-overlay;
       background: url("./img/burger-icon-blue.svg") no-repeat center;
       background-size: 30px;
+    }
+
+    &::before {
+      opacity: 0;
+      content: "menu";
+      color: #252525;
+      text-transform: uppercase;
+      @include font($weight: 300, $size: 0.9rem);
+      position: absolute;
+      top: 50%;
+      left: 20%;
+
+      transform: translate3d(-20%, -50%, 0);
     }
   }
 

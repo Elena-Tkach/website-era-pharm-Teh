@@ -11,18 +11,24 @@ import {
 } from './_utils';
 import { searchListContainer, renderNameSearchList } from './_productList';
 import modalCardHandler from './modalCard';
-import filterProduct from './_productSearch';
+import { searchInput, filterProduct } from './_productSearch';
+import scroll from './_scroll';
 
 const showMoreBtnEl = document.querySelector('.js-btn-show-more');
 const blockMoreEl = document.querySelector('.js-block-more');
 
-filterProduct();
 if (searchListContainer) {
   renderNameSearchList(indexCards);
 }
 if (modal) {
   modalCardHandler();
 }
+
+if (searchInput) {
+  filterProduct();
+}
+
+scroll();
 
 document.body.addEventListener('click', (event) => {
   if (event.target.classList.contains('js-btn-show-more')) {
