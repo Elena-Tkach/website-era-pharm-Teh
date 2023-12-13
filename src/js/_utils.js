@@ -16,6 +16,19 @@ export const toggleAccordeon = (moreBtn, block) => {
   }
 };
 
+export const toggleEl = (moreBtn, block) => {
+  block.classList.toggle('show-slider');
+  moreBtn.classList.toggle('rotate-btn');
+
+  if (block.classList.contains('show-slider')) {
+    block.setAttribute('aria-hidden', 'false');
+    moreBtn.setAttribute('aria-label', 'Закрыть блок');
+  } else {
+    block.setAttribute('aria-hidden', 'true');
+    moreBtn.setAttribute('aria-label', 'Показать больше информации');
+  }
+};
+
 export const showBlock = (element, closeMenuBtn) => {
   element.classList.add('show');
   // previousActiveElement = document.activeElement;

@@ -1,6 +1,5 @@
 const btnHeader = document.querySelector('.js-btn-menu-open ');
-
-export const scroll = () => {
+const scroll = () => {
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
     if (scrollPosition >= 50) {
