@@ -12,6 +12,7 @@ const textContent = (el, style, text) => {
     tag.innerHTML = `${text}`;
   }
 };
+
 export const filterProduct = () => {
   searchInput.addEventListener('input', () => {
     const searchText = searchInput.value.toLowerCase();

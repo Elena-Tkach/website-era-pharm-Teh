@@ -1,6 +1,6 @@
 'use strict;';
 
-import { indexCards } from './_consts';
+// import { indexCards } from './_consts';
 import {
   modal,
   navBlockEl,
@@ -9,7 +9,6 @@ import {
   showBlock,
   hideBlock,
 } from './_utils';
-import { searchListContainer, renderNameSearchList } from './_productList';
 import modalCardHandler from './modalCard';
 import { searchInput, filterProduct } from './_productSearch';
 import scroll from './_scroll';
@@ -17,9 +16,7 @@ import scroll from './_scroll';
 const showMoreBtnEl = document.querySelector('.js-btn-show-more');
 const blockMoreEl = document.querySelector('.js-block-more');
 
-if (searchListContainer) {
-  renderNameSearchList(indexCards);
-}
+
 if (modal) {
   modalCardHandler();
 }

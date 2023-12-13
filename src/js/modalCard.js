@@ -1,4 +1,4 @@
-import { modalsContent } from './_consts';
+import modalsContent from './_consts';
 import {
   modal,
   navBlockEl,
