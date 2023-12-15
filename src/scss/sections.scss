@@ -63,6 +63,16 @@
   background-position: right bottom;
 }
 
+.intro-page2 {
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 440px;
+  transform: translate3d(0, 114px, 0);
+  background-image: url("./img/bg-5.png");
+  background-position: right bottom;
+}
+
 .intro__wrapper-text {
   z-index: 5;
   margin-bottom: 50px;

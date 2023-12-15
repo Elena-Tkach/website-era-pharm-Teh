@@ -81,6 +81,16 @@
   background-color: transparent;
   transition: $trans-03;
 
+  &--dots {
+    position: relative;
+    border: 1px solid transparent;
+    padding: 0 5px;
+    &:hover {
+      border: 1px solid $main-color;
+      color: $main-color;
+    }
+  }
+
   &--menu {
     width: 35px;
     height: 35px;
@@ -175,6 +185,31 @@
   background-repeat: no-repeat;
   background-size: contain;
   display: none;
+}
+
+[data-tooltip] {
+  position: relative;
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    max-width: 300px;
+    left: -50%;
+    top: 0;
+    font-size: 12px;
+    background: $white;
+    border-radius: 0.5px;
+    text-align: center;
+
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: $trans-bezie;
+  }
+}
+.btn--dots[data-tooltip]:hover::after {
+  opacity: 1;
+  left: 2em;
 }
 
 .link {

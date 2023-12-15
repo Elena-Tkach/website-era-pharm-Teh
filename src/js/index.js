@@ -1,11 +1,11 @@
 'use strict;';
 
-// import { indexCards } from './_consts';
 import {
   modal,
   navBlockEl,
   closeMenuBtnEl,
   toggleAccordeon,
+  toggleEl,
   showBlock,
   hideBlock,
 } from './_utils';
@@ -15,7 +15,10 @@ import scroll from './_scroll';
 
 const showMoreBtnEl = document.querySelector('.js-btn-show-more');
 const blockMoreEl = document.querySelector('.js-block-more');
-
+const btnHangEl = document.querySelector('.js-btn-hang');
+const blockModalHangEl = document.querySelector('.js-modal-list-hang');
+const bntAreaEl = document.querySelector('.js-btn-areas');
+const blockModalAreasEl = document.querySelector('.js-modal-list-areas');
 
 if (modal) {
   modalCardHandler();
@@ -30,6 +33,13 @@ scroll();
 document.body.addEventListener('click', (event) => {
   if (event.target.classList.contains('js-btn-show-more')) {
     toggleAccordeon(showMoreBtnEl, blockMoreEl);
+  }
+
+  if (event.target.classList.contains('js-btn-hang')) {
+    toggleEl(btnHangEl, blockModalHangEl);
+  }
+  if (event.target.classList.contains('js-btn-areas')) {
+    toggleEl(bntAreaEl, blockModalAreasEl);
   }
 
   if (event.target.classList.contains('js-btn-menu-open')) {

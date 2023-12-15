@@ -1,7 +1,8 @@
 export const searchInput = document.querySelector('.js-search');
 const searchList = document.querySelector('.js-product-search');
 const searchItems = Array.from(document.querySelectorAll('.js-search-link'));
-const searchDots = document.querySelector('.search__dots');
+const searchDots = document.querySelector('.js-search-more');
+
 
 const textContent = (el, style, text) => {
   const tag = el;
@@ -47,5 +48,17 @@ export const filterProduct = () => {
       textContent(searchDots, 'visibility: visible; opacity: 1; transition: 0.6s;', '...');
       searchList.classList.remove('scrolling');
     }
+  });
+  searchDots.addEventListener('click', () => {
+    searchList.classList.toggle('scrolling');
+    // // searchDots.setAttribute('data-tooltip', 'Уменьшить список');
+    // if (searchDots.getAttribute('data-tooltip') === 'Увеличить список') {
+    //   console.log(1,(searchDots.getAttribute('data-tooltip') === 'Увеличить список'))
+    //   searchDots.setAttribute('data-tooltip', 'Уменьшить список')
+    // } 
+    // if (searchDots.getAttribute('data-tooltip') === 'Уменьшить список') {
+     
+    //   searchDots.setAttribute('data-tooltip', 'Увеличить список');
+    // }
   });
 };

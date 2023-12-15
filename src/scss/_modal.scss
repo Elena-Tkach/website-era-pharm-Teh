@@ -8,10 +8,9 @@
   right: 0;
   width: 100%;
   height: auto;
-  background: #ffffff42;
+  background: #ffffff20;
   backdrop-filter: blur(5px);
   transition: transform $trans-bezie;
-  // background-color: $blue-overlay;
 
   &__container {
     position: relative;
@@ -42,6 +41,7 @@
   }
   .modal__img {
     margin-left: -40px;
+    max-height: 350px;
   }
 }
 
@@ -55,6 +55,7 @@
 
 .modal-body {
   &__list {
+    overflow: hidden;
     padding-left: 15px;
     list-style: square;
   }
@@ -63,5 +64,40 @@
     &::marker {
       color: $main-color;
     }
+  }
+}
+
+.btn--modal-p {
+  position: relative;
+  padding-right: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 10px;
+    background: url("./img/arrow-brlack.svg") no-repeat center right;
+    background-size: contain;
+    transform: translate3d(20px, -50%, 0);
+    transition: $trans-03;
+  }
+  &:hover {
+    color: $main-color;
+    &::after {
+      background: url("./img/arrow-blue.svg") no-repeat center right;
+      background-size: contain;
+    }
+  }
+}
+
+.rotate-btn {
+  color: $main-color;
+  &::after {
+    background: url("./img/arrow-blue.svg") no-repeat center right;
+    background-size: contain;
+    transform: rotate(-180deg) translate3d(-20px, 50%, 0);
+    transition: $trans-03;
+    // transform: rotate(180deg) translate3d(-10px, 50%, 0);
   }
 }
