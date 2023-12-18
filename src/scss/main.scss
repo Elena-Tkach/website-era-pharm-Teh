@@ -187,6 +187,12 @@
   display: none;
 }
 
+.intro__bg {
+  z-index: 2;
+  position: relative;
+  display: none;
+}
+
 [data-tooltip] {
   position: relative;
   &::after {

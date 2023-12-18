@@ -58,6 +58,12 @@
   }
 }
 
+@mixin laptopS-1024 {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin tablet-992 {
   @media (min-width: 992px) {
     @content;

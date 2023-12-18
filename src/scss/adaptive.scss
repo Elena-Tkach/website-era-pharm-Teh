@@ -129,15 +129,6 @@
     color: $main-color;
     @include font($weight: 700, $size: 2em);
     text-shadow: 0px 0px 10px #fff;
-    // text-shadow:
-    //   1px 0 #fff,
-    //   -1px 0 #fff,
-    //   0 1px #fff,
-    //   0 -1px #fff,
-    //   1px 1px #fff,
-    //   -1px -1px #fff,
-    //   1px -1px #fff,
-    //   -1px 1px #fff;
   }
 
   .subtitle--first {
@@ -156,7 +147,7 @@
     }
   }
   .section {
-    padding: 150px 0;
+    padding: 200px 0;
   }
 
   .container-text {
@@ -369,10 +360,6 @@
       text-align: start;
       margin-right: 35px;
     }
-
-    // .modal__img {
-    //   margin-top: -40px;
-    // }
   }
 
   .modal-content {
@@ -464,6 +451,9 @@
     color: #bcbde9;
     padding-left: 5px;
   }
+  .intro__bg {
+    display: block;
+  }
 }
 
 //-------------------992---------------------------------------------------------------
@@ -494,14 +484,6 @@
     width: 80%;
     padding: 70px;
   }
-
-  // .is-first-load {
-  //   // transform: translate3d(0, 0, 0);
-  //   // transition: $trans-06;
-  //   // transition:
-  //   //   opacity 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-  //   //   transform 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  // }
 
   .has-scrolled {
     z-index: 20;
@@ -536,6 +518,18 @@
       background-size: 35px;
       background-color: $blue-overlay;
       border: 2px solid $blue-overlay;
+    }
+  }
+}
+
+@include laptopS-1024 {
+  .pages-img {
+    transform: translate3d(10%, -170px, 0);
+    &--2 {
+      transform: translate3d(5%, -200px, 0);
+    }
+    &--s {
+      transform: translate3d(10%, -318px, 0);
     }
   }
 }
@@ -641,6 +635,13 @@
     }
   }
 
+  .pages-img {
+    // transform: translate3d(15%, -294px, 0);
+    &--s {
+      transform: translate3d(10%, -413px, 0);
+    }
+  }
+
   .modal {
     &__container {
       width: 60%;
@@ -671,6 +672,20 @@
     &-s {
       @include font($size: 2.2em);
       line-height: 1.6;
+    }
+  }
+  .pages-img {
+    // transform: translate3d(15%, -150px, 0);
+
+    &--2 {
+      transform: translate3d(15%, -179px, 0);
+    }
+
+    &--c {
+      transform: translate3d(15%, -212px, 0);
+    }
+    &--s {
+      transform: translate3d(15%, -390px, 0);
     }
   }
 }

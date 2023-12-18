@@ -64,12 +64,19 @@
 
   <main class="main-page">
     <div class="container">
-      <section class="intro">
-        <div class="bg-intro intro-сontact"></div>
+      <section class="intro intro-pages">
         <div class="intro__wrapper-text">
           <h1 class="intro__title title title--first title--first uppercase">
             Контакты
           </h1>
+        </div>
+        <div class="intro__bg">
+          <picture>
+            <source media="(max-width: 1200px)" srcset="img/bg-contact-250.png" />
+            <source media="(max-width: 1439px)" srcset="img/bg-contact-450.png" />
+            <source media="(min-width: 1440px)" srcset="img/bg-contact-600.png" />
+            <img src="img/bg-contact-600.png" alt="Контакты" class="pages-img  pages-img--c">
+          </picture>
         </div>
       </section>
     </div>
