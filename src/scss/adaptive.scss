@@ -104,10 +104,6 @@
     margin-bottom: 100px;
   }
 
-  .main-page .intro__wrapper-text {
-    width: 80%;
-  }
-
   .title--first {
     @include font($size: 2.7em);
     line-height: 1.5;
@@ -259,6 +255,7 @@
 
     .card-item__content {
       right: 0;
+      // transform: translate3d(70px, 40px, 0);
     }
 
     .card-item-bg {
@@ -338,7 +335,7 @@
       }
 
       .card-item-bg {
-        transform: translate3d(140px, 30px, 0);
+        transform: translate3d(0, 30px, 0);
       }
 
       .card-item__content {
@@ -522,17 +519,9 @@
   }
 }
 
-@include laptopS-1024 {
-  .pages-img {
-    transform: translate3d(10%, -170px, 0);
-    &--2 {
-      transform: translate3d(5%, -200px, 0);
-    }
-    &--s {
-      transform: translate3d(10%, -318px, 0);
-    }
-  }
-}
+// @include laptopS-1024 {
+
+// }
 
 //-------------------------1200------------------------------------------------------------------
 @include laptopM-1200 {
@@ -632,13 +621,6 @@
 
     &-s {
       @include font($size: 2em);
-    }
-  }
-
-  .pages-img {
-    // transform: translate3d(15%, -294px, 0);
-    &--s {
-      transform: translate3d(10%, -413px, 0);
     }
   }
 
