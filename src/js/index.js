@@ -12,13 +12,8 @@ import {
 import modalCardHandler from './modalCard';
 import { searchInput, filterProduct } from './_productSearch';
 import scroll from './_scroll';
+import simpleParallax from 'simple-parallax-js';
 
-const showMoreBtnEl = document.querySelector('.js-btn-show-more');
-const blockMoreEl = document.querySelector('.js-block-more');
-const btnHangEl = document.querySelector('.js-btn-hang');
-const blockModalHangEl = document.querySelector('.js-modal-list-hang');
-const bntAreaEl = document.querySelector('.js-btn-areas');
-const blockModalAreasEl = document.querySelector('.js-modal-list-areas');
 
 if (modal) {
   modalCardHandler();
@@ -29,24 +24,16 @@ if (searchInput) {
 }
 
 scroll();
-
-document.body.addEventListener('click', (event) => {
-  if (event.target.classList.contains('js-btn-show-more')) {
-    toggleAccordeon(showMoreBtnEl, blockMoreEl);
-  }
-
-  if (event.target.classList.contains('js-btn-hang')) {
-    toggleEl(btnHangEl, blockModalHangEl);
-  }
-  if (event.target.classList.contains('js-btn-areas')) {
-    toggleEl(bntAreaEl, blockModalAreasEl);
-  }
-
-  if (event.target.classList.contains('js-btn-menu-open')) {
-    showBlock(navBlockEl, closeMenuBtnEl);
-  }
-
-  if (event.target.classList.contains('js-btn-close')) {
-    hideBlock(navBlockEl);
-  }
+const image = document.getElementsByClassName('thumbnail');
+if (image) {
+  new simpleParallax(image, {
+	scale: 1.2,
+    delay: .6,
+    transition: 'linear',
 });
+
+}
+
+
+// const year = new Date().getFullYear();
+// document.querySelector('.year').textContent = year;

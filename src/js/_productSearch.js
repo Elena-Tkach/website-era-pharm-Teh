@@ -42,23 +42,19 @@ export const filterProduct = () => {
 
     if (filteredItems.length < 1) {
       textContent(searchDots, 'visibility: visible; opacity: 1; color: blue;', 'Ничего не найденно!');
+    } else {
+      textContent(searchDots, 'visibility: hidden; opacity: 0; transition: 0.6s;', '');
     }
 
     if (searchText.length === 0) {
-      textContent(searchDots, 'visibility: visible; opacity: 1; transition: 0.6s;', '...');
+      textContent(searchDots, 'visibility: visible; opacity: 1; transition: 0.6s;', '');
       searchList.classList.remove('scrolling');
-    }
+    } 
   });
+
+  
   searchDots.addEventListener('click', () => {
     searchList.classList.toggle('scrolling');
-    // // searchDots.setAttribute('data-tooltip', 'Уменьшить список');
-    // if (searchDots.getAttribute('data-tooltip') === 'Увеличить список') {
-    //   console.log(1,(searchDots.getAttribute('data-tooltip') === 'Увеличить список'))
-    //   searchDots.setAttribute('data-tooltip', 'Уменьшить список')
-    // } 
-    // if (searchDots.getAttribute('data-tooltip') === 'Уменьшить список') {
-     
-    //   searchDots.setAttribute('data-tooltip', 'Увеличить список');
-    // }
+    searchDots.classList.toggle('rotate-btn');
   });
 };
