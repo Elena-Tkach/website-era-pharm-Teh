@@ -79,7 +79,7 @@
     height: 10px;
     background: url("./img/arrow-brlack.svg") no-repeat center right;
     background-size: contain;
-    transform: translate3d(20px, -50%, 0);
+    transform: translate3d(30px, -50%, 0);
     transition: $trans-03;
   }
   &:hover {
@@ -89,14 +89,10 @@
       background-size: contain;
     }
   }
-}
 
-.rotate-btn {
-  color: $main-color;
-  &::after {
-    background: url("./img/arrow-blue.svg") no-repeat center right;
-    background-size: contain;
-    transform: rotate(-180deg) translate3d(-20px, 50%, 0);
-    transition: $trans-03;
+  &-i {
+    &::after {
+      transform: translate3d(10px, -50%, 0);
+    }
   }
 }

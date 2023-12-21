@@ -105,7 +105,7 @@
   }
 
   .title--first {
-    @include font($size: 2.7em);
+    @include font($weight: 600, $size: 2.7em);
     line-height: 1.5;
 
     &-s {
@@ -524,14 +524,10 @@
       background: url(./img/burger-icon.svg) no-repeat center right 20%;
       background-size: 35px;
       background-color: $blue-overlay;
-      border: 2px solid $blue-overlay;
+      // border: 2px solid $blue-overlay;
     }
   }
 }
-
-// @include laptopS-1024 {
-
-// }
 
 //-------------------------1200------------------------------------------------------------------
 @include laptopM-1200 {
@@ -540,7 +536,8 @@
   }
 
   .title--first {
-    @include font($size: 3em);
+    @include font($weight: 500, $size: 3em);
+    line-height: 1.4;
 
     &-s {
       @include font($size: 2em);
@@ -616,6 +613,10 @@
       left: 28%;
     }
   }
+
+  .card-right .card-item__content {
+    width: 80%;
+  }
 }
 
 @include laptopM-1440 {
@@ -627,7 +628,8 @@
   }
 
   .title--first {
-    @include font($size: 3.5em);
+    @include font($weight: 500, $size: 3.5em);
+    line-height: 1.4;
 
     &-s {
       @include font($size: 2em);
@@ -650,6 +652,9 @@
     &__header {
       margin-bottom: 30px;
     }
+  }
+  .card-right .card-item__content {
+    width: 100%;
   }
 }
 

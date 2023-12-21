@@ -40,10 +40,11 @@ export const toggleEl = (moreBtn, block) => {
 export const showBlock = (element, closeMenuBtn) => {
   element.classList.add('show');
   element.setAttribute('aria-hidden', 'false');
-
-  setTimeout(() => {
-    closeMenuBtn.focus();
-  }, 100);
+  if (closeMenuBtn) {
+    setTimeout(() => {
+      closeMenuBtn.focus();
+    }, 100);
+  }
 };
 
 export const hideBlock = (element) => {
@@ -71,5 +72,3 @@ document.body.addEventListener('click', (event) => {
     hideBlock(navBlockEl);
   }
 });
-
-

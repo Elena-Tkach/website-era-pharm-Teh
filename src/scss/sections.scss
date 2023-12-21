@@ -23,7 +23,6 @@
 
 .intro-pages {
   display: flex;
-  // align-items: center;
   justify-content: space-between;
 }
 
@@ -43,7 +42,8 @@
 .pages-img {
   z-index: 2;
   position: absolute;
-  top: 0;
+  max-width: 450px;
+  top: -70px;
   right: 0;
   transform: translate3d(5%, -35%, 0);
   transition: $trans-06;

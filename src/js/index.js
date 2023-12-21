@@ -1,19 +1,12 @@
 'use strict;';
 
-import {
-  modal,
-  navBlockEl,
-  closeMenuBtnEl,
-  toggleAccordeon,
-  toggleEl,
-  showBlock,
-  hideBlock,
-} from './_utils';
+import simpleParallax from 'simple-parallax-js';
+import { modal } from './_utils';
 import modalCardHandler from './modalCard';
 import { searchInput, filterProduct } from './_productSearch';
 import scroll from './_scroll';
-import simpleParallax from 'simple-parallax-js';
 
+const image = document.getElementsByClassName('thumbnail');
 
 if (modal) {
   modalCardHandler();
@@ -22,18 +15,13 @@ if (modal) {
 if (searchInput) {
   filterProduct();
 }
-
 scroll();
-const image = document.getElementsByClassName('thumbnail');
+const year = new Date().getFullYear();
+document.querySelector('.year').textContent = year;
 if (image) {
   new simpleParallax(image, {
-	scale: 1.2,
-    delay: .6,
+    scale: 1.2,
+    delay: 0.6,
     transition: 'linear',
-});
-
+  });
 }
-
-
-// const year = new Date().getFullYear();
-// document.querySelector('.year').textContent = year;

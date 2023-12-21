@@ -51,7 +51,7 @@
 
               <li class="nav__item nav-item nav-item--line uppercase">
                 Каталог
-                <a href="#catalog" class="nav__link link--absolute link"></a>
+                <a href="#catalog" class="nav__link link--absolute link js-anchors"></a>
               </li>
             </ul>
           </nav>
@@ -71,7 +71,7 @@
             Ферментеры и&nbsp;биореакторы
           </h1>
         </div>
-        <div class="intro__bg">
+        <div class="intro__bg js-scroll">
           <picture>
             <source media="(max-width: 1024px)" srcset="img/bg-1-p-250.png" />
             <source media="(max-width: 1439px)" srcset="img/bg-1-p-600.png" />
@@ -180,8 +180,11 @@
             </a>
           </li>
         </ul>
-        <div class="search__wrap">
-          <button class="search__dots btn btn--dots js-search-more btn--modal-p" type="button"></button>
+        <div class="search__wrap js-search-wrap">
+          <span class="text-error js-text-error hidden" aria-hidden="true"> Ничего не найденно. Пропробуйте ввести новый
+            запрос. </span>
+          <button class="search__dots btn btn--dots js-search-more btn--modal-p btn--modal-p-i" type="button"
+            aria-label="Расскрыть список товаров"></button>
         </div>
       </div>
 
@@ -468,18 +471,18 @@
         </address>
       </div>
       <div class="footer__wrapper--center wrapper-center">
-        <small class="text--light">© <span>2023</span> TOO «Era Metal»</small>
+        <small class="text--light">© <span class="year">2023</span> TOO «Era Metal»</small>
       </div>
     </div>
   </footer>
 
-  <template id="productSearchTemplate">
+  <!-- <template id="productSearchTemplate">
     <li class="search__item search-item">
       <a href="#" class="search__link link js-product-search-link">#
         <span class="js-product-search">BIOSTAT® A</span>
       </a>
     </li>
-  </template>
+  </template> -->
 
   <div class="overlay js-overlay"></div>
 </body>

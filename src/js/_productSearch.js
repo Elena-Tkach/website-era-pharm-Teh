@@ -1,18 +1,10 @@
+import { hideBlock, showBlock } from './_utils';
+
 export const searchInput = document.querySelector('.js-search');
 const searchList = document.querySelector('.js-product-search');
 const searchItems = Array.from(document.querySelectorAll('.js-search-link'));
-const searchDots = document.querySelector('.js-search-more');
-
-
-const textContent = (el, style, text) => {
-  const tag = el;
-  if (style) {
-    tag.style.cssText = `${style}`;
-  }
-  if (text) {
-    tag.innerHTML = `${text}`;
-  }
-};
+const searchMoreBtn = document.querySelector('.js-search-more');
+const textError = document.querySelector('.js-text-error');
 
 export const filterProduct = () => {
   searchInput.addEventListener('input', () => {
@@ -20,9 +12,6 @@ export const filterProduct = () => {
     const filteredItems = searchItems.filter(
       (item) => item.textContent.toLowerCase().includes(searchText)
     );
-    if (searchText === 0) {
-      document.querySelector('.search__dots').innerHTML = 'Ничего не найденно!';
-    }
     searchItems.forEach((el) => {
       const item = el;
       item.parentElement.style.display = 'none';
@@ -32,29 +21,30 @@ export const filterProduct = () => {
       filteritem.parentElement.style.display = 'list-item';
     });
 
-    if (filteredItems.length > 2) {
+    if (searchText === 0) {
+      showBlock(textError);
+    } else {
+      hideBlock(textError);
+    }
+
+    if (filteredItems.length >= 2) {
       searchList.classList.add('scrolling');
-      textContent(searchDots, 'visibility: hidden; opacity: 0; transition: 0.6s;');
+      searchMoreBtn.classList.add('rotate-btn-i');
     } else {
       searchList.classList.remove('scrolling');
-      textContent(searchDots, 'visibility: visible; opacity: 1;transition: 0.6s;', '...');
+      searchMoreBtn.classList.remove('rotate-btn-i');
     }
 
     if (filteredItems.length < 1) {
-      textContent(searchDots, 'visibility: visible; opacity: 1; color: blue;', 'Ничего не найденно!');
+      showBlock(textError);
+      searchMoreBtn.classList.add('hidden');
     } else {
-      textContent(searchDots, 'visibility: hidden; opacity: 0; transition: 0.6s;', '');
+      searchMoreBtn.classList.remove('hidden');
     }
-
-    if (searchText.length === 0) {
-      textContent(searchDots, 'visibility: visible; opacity: 1; transition: 0.6s;', '');
-      searchList.classList.remove('scrolling');
-    } 
   });
 
-  
-  searchDots.addEventListener('click', () => {
+  searchMoreBtn.addEventListener('click', () => {
     searchList.classList.toggle('scrolling');
-    searchDots.classList.toggle('rotate-btn');
+    searchMoreBtn.classList.toggle('rotate-btn-i');
   });
 };

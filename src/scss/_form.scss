@@ -77,6 +77,7 @@
   }
 }
 .search__dots {
+  padding-right: 0;
   opacity: 0.7;
   visibility: visible;
   transition: $trans-06;
@@ -130,13 +131,13 @@
   outline: none;
   border-radius: 2px;
   transition: $trans-06;
-  border: 1px solid $main-color;
+  border: 1px solid $blue-overlay;
 
   @include font($size: 14px);
   &:hover,
   &:focus,
   &:active {
-    border: 1px solid $blue-overlay;
+    border: 1px solid $main-color;
   }
 
   &--mg {
@@ -146,4 +147,8 @@
 
 .form-btn {
   font-size: 14px;
+}
+
+.text-error {
+  color: $main-color;
 }
