@@ -1,6 +1,7 @@
 export const modal = document.querySelector('.js-modal');
 export const navBlockEl = document.querySelector('.js-nav-block');
 export const closeMenuBtnEl = document.querySelector('.js-btn-close');
+export const popupEl = document.querySelector('.js-popup');
 
 const showMoreBtnEl = document.querySelector('.js-btn-show-more');
 const blockMoreEl = document.querySelector('.js-block-more');
@@ -52,6 +53,13 @@ export const hideBlock = (element) => {
   element.setAttribute('aria-hidden', 'true');
 };
 
+export const successSentForm = (popup) => {
+  popup.classList.add('show');
+  // document.body.style.cssText = 'overflow: hidden;';
+  hideBlock(popup);
+  // document.addEventListener('keydown', onPressEscKeydown);
+};
+
 document.body.addEventListener('click', (event) => {
   if (event.target.classList.contains('js-btn-show-more')) {
     toggleAccordeon(showMoreBtnEl, blockMoreEl);
@@ -70,5 +78,9 @@ document.body.addEventListener('click', (event) => {
 
   if (event.target.classList.contains('js-btn-close')) {
     hideBlock(navBlockEl);
+  }
+
+  if (event.target.classList.contains('js-btn-modal-close')) {
+    hideBlock(popupEl);
   }
 });

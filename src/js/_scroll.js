@@ -1,4 +1,5 @@
 const btnHeader = document.querySelector('.js-btn-menu-open ');
+const scrollItems = document.querySelectorAll(`.js-scroll`);
 const anchors = document.querySelectorAll('.js-anchors');
 
 const menuScrolled = (btnEl, scrollPosition) => {
@@ -11,24 +12,23 @@ const menuScrolled = (btnEl, scrollPosition) => {
   }
 };
 
-const slowScroll = (anchorsPage) => {
-  for (let anchor of anchorsPage) {
-    anchor.addEventListener(`click`, (e) => {
-      e.preventDefault();
-      const blockID = anchor.getAttribute(`href`)
-      document.querySelector(`${blockID}`).scrollIntoView({
-        behavior: `smooth`,
-        block: `start`
-      })
-    })
-  }
-};
+const checkBoxes = (boxEl) => {
+  const box = boxEl;
+  const triggerTop = window.innerHeight - 100;
+
+  scrollItems.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < triggerTop) {
+      box.classList.add('isanimate');
+    }
+  });
+}
 
 const scroll = () => {
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
     menuScrolled(btnHeader, scrollPosition);
-    slowScroll(anchors);
+    checkBoxes(scrollItems);
   });
 };
 

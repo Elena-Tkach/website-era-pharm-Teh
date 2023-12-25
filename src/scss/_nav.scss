@@ -69,6 +69,7 @@
   transition: $trans-06;
   padding: 10px 0;
   color: $white;
+  color: $main-color;
   @include font($weight: 500);
 }
 .nav-item--line {
@@ -78,7 +79,7 @@
     top: 50%;
     width: 60px;
     height: 2px;
-    background-color: $light-grey;
+    background-color: $main-color;
     position: absolute;
     transition: $trans-06;
   }
@@ -91,7 +92,7 @@
       top: 50%;
       width: 60px;
       height: 2px;
-      background-color: $light-grey;
+      background-color: $main-color;
       position: absolute;
     }
   }

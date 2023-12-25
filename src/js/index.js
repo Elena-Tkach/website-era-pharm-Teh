@@ -5,6 +5,7 @@ import { modal } from './_utils';
 import modalCardHandler from './modalCard';
 import { searchInput, filterProduct } from './_productSearch';
 import scroll from './_scroll';
+import sendEmail from './_sendMail';
 
 const image = document.getElementsByClassName('thumbnail');
 
@@ -16,6 +17,7 @@ if (searchInput) {
   filterProduct();
 }
 scroll();
+
 const year = new Date().getFullYear();
 document.querySelector('.year').textContent = year;
 if (image) {
@@ -25,3 +27,4 @@ if (image) {
     transition: 'linear',
   });
 }
+sendEmail();

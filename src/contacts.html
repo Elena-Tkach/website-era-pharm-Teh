@@ -45,7 +45,7 @@
               </li>
               <li class="nav__item nav-item nav-item--line uppercase">
                 Каталог
-                <a href="index.html#catalog" class="nav__link link--absolute link js-anchors"></a>
+                <a href="index.html#catalog" class="nav__link link--absolute link "></a>
               </li>
               <li class="nav__item nav-item nav-item--line uppercase">
                 О нас
@@ -66,27 +66,27 @@
     <div class="container">
       <section class="intro intro-pages">
         <div class="intro__wrapper-text">
-          <h1 class="intro__title title title--first title--first uppercase">
+          <h1 class="intro__title title title--first title--first uppercase animate">
             Контакты
           </h1>
         </div>
-        <div class="intro__bg">
+        <div class="intro__bg fade-in-up js-scroll">
           <picture>
             <source media="(max-width: 1200px)" srcset="img/bg-contact-250.png" />
             <source media="(max-width: 1439px)" srcset="img/bg-contact-450.png" />
             <source media="(min-width: 1440px)" srcset="img/bg-contact-600.png" />
-            <img src="img/bg-contact-600.png" alt="Контакты" class="pages-img  thumbnail">
+            <img src="img/bg-contact-600.png" alt="Контакты" class="pages-img  thumbnail" loading="lazy">
           </picture>
         </div>
       </section>
     </div>
 
-    <div class="vertival-line"></div>
+    <div class="vertival-line fade-in-up js-scroll"></div>
     <section class="section about-text bg-light-grey">
       <div class="container">
         <div class="section__container">
           <div class="contact-address">
-            <ul class="address__list">
+            <ul class="address__list fade-in-up js-scroll">
               <li class="address__item">
                 <p class="addresss__text text--light">
                   <span class="uppercase">БИН:</span>
@@ -116,18 +116,19 @@
             </ul>
           </div>
 
-          <div class="section__form">
+          <div class="section__form fade-in-up fade-in-up-2s js-scroll">
             <h2 class="title-mg title--blue title--fourth uppercase">
               Отправить запрос
             </h2>
-            <form action="#" class="contact-form">
+            <form class="contact-form" action="#" method="">
               <fieldset class="form__fieldset">
-                <input type="text" class="contact-input input input--mg" placeholder="ФИО*" required />
-                <input type="text" class="contact-input input input--mg" placeholder="Телефон*" required />
-                <input type="text" class="contact-input input" placeholder="Email*" />
+                <input type="text" class="contact-input input input--mg" name="name" placeholder="ФИО*" required />
+                <input type="tel" class="contact-input input input--mg" name="phone" placeholder="Телефон*" required
+                  inputmode="tel" />
+                <input type="text" class="contact-input input" name="email" placeholder="Email*" inputmode="email" />
               </fieldset>
 
-              <button class="form-btn btn btn--border">
+              <button class="form-btn btn btn--border" type="submit">
                 Отправить запрос
               </button>
               <div class="text-center text-secondary mb-3">
@@ -140,7 +141,7 @@
     </section>
   </main>
 
-  <div class="vertival-line"></div>
+  <div class="vertival-line fade-in-up js-scroll"></div>
 
   <footer class="footer">
     <div class="container">
@@ -148,10 +149,10 @@
         <picture>
           <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
           <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
-          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo" />
+          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo fade-in-up js-scroll" />
         </picture>
       </a>
-      <div class="footer__wrapper">
+      <div class="footer__wrapper fade-in-up js-scroll">
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -165,7 +166,7 @@
               <a href="aboutus.html" class="link"> О нас</a>
             </li>
 
-            <li class="nav__item active-item">
+            <li class="nav__item">
               <a href="#" class="link">Контакты</a>
             </li>
 
@@ -217,6 +218,24 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal js-popup hidden" aria-modal="true" role="dialog" aria-label="Модальное окно с описанием продукта">
+    <div class="modal__container popup">
+      <button class="modal__btn btn btn--close btn--close-blue js-btn-modal-close" aria-label="Закрыть модальное окно"
+        type="button"></button>
+      <div class="popup__header">
+        <div class="modal-header__container-img">
+          <img src="img/popup.svg" alt="BIOSTAT®A" class="modal__img" loading="lazy">
+        </div>
+
+        <div class="modal-header__content modal-content">
+          <p class="modal-content__text modal__text text text-14">
+            Запрос удачно отправлен. В ближайшее время мы свяжемся с вами.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="overlay js-overlay"></div>
 </body>

@@ -7,6 +7,9 @@
 }
 .bg-blue-main {
   background-color: $main-color;
+  backdrop-filter: blur(30px);
+  background-color: #1e22fa00;
+  box-shadow: inset 2px 0px 8px rgba(184, 184, 184, 0.229);
 }
 
 .title--first {
@@ -122,6 +125,7 @@
     border-radius: 50%;
 
     background: url("./img/close-icon-white.svg") no-repeat;
+    background: url("./img/close-blue.svg") no-repeat;
     background-size: contain;
 
     &:hover,

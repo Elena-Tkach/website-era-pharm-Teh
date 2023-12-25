@@ -1,4 +1,5 @@
 @import "normalize.css";
+
 @import "./scss/base/fonts";
 @import "./scss/abstract/variable";
 @import "./scss/abstract/mixin";
@@ -12,6 +13,6 @@
 @import "./scss/modal";
 @import "./scss/form";
 @import "./scss/main";
-@import "./scss/animation";
 
 @import "./scss/adaptive";
+@import "./scss/animate";
