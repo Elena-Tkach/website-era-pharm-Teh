@@ -28,9 +28,15 @@
 }
 
 .animate-2 {
-	animation-duration: 2.2s;
+	animation-duration: 2.4s;
 	animation-name: fade-up;
 }
+
+.animate-3 {
+	animation-duration: 3s;
+	animation-name: fade-up;
+}
+
 @keyframes fade-up {
 	from {
 		opacity: 0;

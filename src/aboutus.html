@@ -26,7 +26,7 @@
           <picture>
             <source media="(max-width: 798px)" srcset="img/logo-150.png" />
             <source media="(min-width: 799px)" srcset="img/logo-180.png" />
-            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo" />
+            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo" loading="lazy" />
           </picture>
         </a>
 
@@ -72,22 +72,22 @@
           </h1>
         </div>
 
-        <div class="intro__bg fade-in-up js-scroll">
+        <div class="intro__bg animate-2">
           <picture>
             <source media="(max-width: 1200px)" srcset="img/bg-about-350.png" />
             <source media="(max-width: 1439px)" srcset="img/bg-about-450.png" />
             <source media="(min-width: 1440px)" srcset="img/bg-about-600.png" />
-            <img src="img/bg-about-600.png" alt="О нас" class="pages-img thumbnail">
+            <img src="img/bg-about-600.png" alt="О нас" class="pages-img thumbnail" loading="lazy">
           </picture>
         </div>
       </section>
     </div>
 
-    <div class="vertival-line fade-in-up js-scroll"></div>
+    <div class="vertival-line animate-3 "></div>
     <section class="section about-text bg-light-grey">
       <div class="container">
         <div class="container-text">
-          <p class="text--mg text text--small fade-in-up js-scroll">
+          <p class="text--mg text text--small animate-3 fade-in-up-6s">
             <span class="bold uppercase">Era-PharmTeh</span> - ваш надежный
             партнер в сфере поставок современного оборудования для
             фармацевтических компаний. Мы предлагаем широкий ассортимент
@@ -96,7 +96,7 @@
             оптимизировать производственные процессы и обеспечить качество
             продукции на высшем уровне.
           </p>
-          <div class="catalog__wrapper--btn wrapper--left fade-in-up fade-in-up-2s js-scroll">
+          <div class="catalog__wrapper--btn wrapper--left animate-3">
             <a href="contacts.html" class="btn catalog__btn btn--border">Отправить запрос</a>
           </div>
         </div>
@@ -110,7 +110,8 @@
         <picture>
           <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
           <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
-          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo fade-in-up js-scroll" />
+          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo fade-in-up js-scroll"
+            loading="lazy" />
         </picture>
       </a>
       <div class="footer__wrapper fade-in-up js-scroll">
@@ -129,7 +130,7 @@
             </li>
 
             <li class="nav__item">
-              <form action="" class="nav__form form form--footer">
+              <form action="./inc/senmail.php" method="post" class="nav__form form form--footer">
                 <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
                   placeholder="Написать нам"></textarea>
                 <button class="form__btn btn btn--footer" type="submit">

@@ -1,6 +1,5 @@
 const btnHeader = document.querySelector('.js-btn-menu-open ');
-const scrollItems = document.querySelectorAll(`.js-scroll`);
-const anchors = document.querySelectorAll('.js-anchors');
+const scrollItems = document.querySelectorAll('.js-scroll');
 
 const menuScrolled = (btnEl, scrollPosition) => {
   const btn = btnEl;
@@ -14,11 +13,12 @@ const menuScrolled = (btnEl, scrollPosition) => {
 
 const checkBoxes = (boxEl) => {
   const box = boxEl;
-  const triggerTop = window.innerHeight - 100;
+  const triggerTop = window.innerHeight - 50;
 
   scrollItems.forEach(box => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < triggerTop) {
+      console.log(boxTop, triggerTop);
       box.classList.add('isanimate');
     }
   });

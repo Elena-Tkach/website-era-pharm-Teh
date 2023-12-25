@@ -22,14 +22,16 @@ $phone=stripslashes($phone);
 $phone=htmlspecialchars($phone);
 }
 // адрес почты куда придет письмо
-$address="info@era-voda.kz";
+$address="info@era-metal.kz";
 // текст письма 
-$title="Ера-Вода. Поставка и монтаж фильтров и систем очистки воды";
+$title="Era-PharmTeh. Пришло с сайта.";
 
-$message = "Здравствуйте!\nИмя: $name;\nEmail: $email;\nТелефон: $phone; \nСообщение: $sab;";
+$message = "\nИмя: $name;\nEmail: $email;\nТелефон: $phone; \nСообщение: $sab;";
 
 if (isset($name) ) {
 mail($address, $title,  $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $address"); 
+} else {
+	echo 'Письмо не отправлено!';
 }
 
 ?>

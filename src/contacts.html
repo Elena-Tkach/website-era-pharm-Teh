@@ -70,7 +70,7 @@
             Контакты
           </h1>
         </div>
-        <div class="intro__bg fade-in-up js-scroll">
+        <div class="intro__bg animate-2">
           <picture>
             <source media="(max-width: 1200px)" srcset="img/bg-contact-250.png" />
             <source media="(max-width: 1439px)" srcset="img/bg-contact-450.png" />
@@ -81,7 +81,7 @@
       </section>
     </div>
 
-    <div class="vertival-line fade-in-up js-scroll"></div>
+    <div class="vertival-line animate-3"></div>
     <section class="section about-text bg-light-grey">
       <div class="container">
         <div class="section__container">
@@ -120,7 +120,7 @@
             <h2 class="title-mg title--blue title--fourth uppercase">
               Отправить запрос
             </h2>
-            <form class="contact-form" action="#" method="">
+            <form class="contact-form js-form" action="./inc/senmail.php" method="post">
               <fieldset class="form__fieldset">
                 <input type="text" class="contact-input input input--mg" name="name" placeholder="ФИО*" required />
                 <input type="tel" class="contact-input input input--mg" name="phone" placeholder="Телефон*" required
@@ -149,7 +149,8 @@
         <picture>
           <source media="(max-width: 798px)" srcset="img/logo-icon-80.svg" />
           <source media="(min-width: 799px)" srcset="img/logo-icon-150.svg" />
-          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo fade-in-up js-scroll" />
+          <img src="img/logo-icon-80.svg" alt="Логотип компании" class="header__logo fade-in-up js-scroll"
+            loading="lazy" />
         </picture>
       </a>
       <div class="footer__wrapper fade-in-up js-scroll">
@@ -171,7 +172,7 @@
             </li>
 
             <li class="nav__item">
-              <form action="" class="nav__form form form--footer">
+              <form action="./inc/senmail.php" class="nav__form form form--footer js-form" method="post">
                 <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
                   placeholder="Написать нам"></textarea>
                 <button class="form__btn btn btn--footer" type="submit">
@@ -221,7 +222,7 @@
 
   <div class="modal js-popup hidden" aria-modal="true" role="dialog" aria-label="Модальное окно с описанием продукта">
     <div class="modal__container popup">
-      <button class="modal__btn btn btn--close btn--close-blue js-btn-modal-close" aria-label="Закрыть модальное окно"
+      <button class="modal__btn btn btn--close btn--close-blue js-btn-popup-close" aria-label="Закрыть модальное окно"
         type="button"></button>
       <div class="popup__header">
         <div class="modal-header__container-img">

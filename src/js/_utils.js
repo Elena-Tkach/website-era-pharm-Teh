@@ -54,10 +54,10 @@ export const hideBlock = (element) => {
 };
 
 export const successSentForm = (popup) => {
-  popup.classList.add('show');
-  // document.body.style.cssText = 'overflow: hidden;';
   hideBlock(popup);
-  // document.addEventListener('keydown', onPressEscKeydown);
+  document.body.classList.add('no-scroll');
+  popup.classList.add('show');
+ 
 };
 
 document.body.addEventListener('click', (event) => {
@@ -80,7 +80,12 @@ document.body.addEventListener('click', (event) => {
     hideBlock(navBlockEl);
   }
 
-  if (event.target.classList.contains('js-btn-modal-close')) {
+  if (event.target.classList.contains('js-btn-popup-close')) {
+    document.body.classList.remove('no-scroll');
+    hideBlock(popupEl);
+  }
+  if (event.target.classList.contains('js-popup')) {
+    document.body.classList.remove('no-scroll');
     hideBlock(popupEl);
   }
 });

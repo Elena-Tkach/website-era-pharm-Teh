@@ -1,7 +1,7 @@
-import {successSentForm, popupEl} from './_utils';
+import { successSentForm, popupEl } from './_utils';
 
 const form = document.querySelectorAll('.js-form');
-const linkSendLightForm = './inc/send_form_light.php';
+const linkSendLightForm = './inc/senmail.php';
 
 const sendEmail = () => {
   form.forEach(formItem => {
@@ -20,7 +20,7 @@ const sendEmail = () => {
       }, 500);
 
       if (result) {
-        console.log('yes');
+        console.log('ok');
       } else {
         console.log('no');
       }
