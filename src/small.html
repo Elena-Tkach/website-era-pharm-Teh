@@ -207,7 +207,7 @@
             </li>
 
             <li class="nav__item">
-              <form action="./inc/senmail.php" method="post" class="nav__form form form--footer">
+              <form action="./inc/senmail.php" method="post" class="nav__form form form--footer js-form">
                 <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
                   placeholder="Написать нам"></textarea>
                 <button class="form__btn btn btn--footer" type="submit">Отправить</button>
@@ -314,7 +314,24 @@
           </ul>
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="modal js-popup hidden" aria-modal="true" role="dialog" aria-label="Модальное окно с описанием продукта">
+    <div class="modal__container popup">
+      <button class="modal__btn btn btn--close btn--close-blue js-btn-popup-close" aria-label="Закрыть модальное окно"
+        type="button"></button>
+      <div class="popup__header">
+        <div class="modal-header__container-img">
+          <img src="img/popup.svg" alt="BIOSTAT®A" class="modal__img" loading="lazy">
+        </div>
+
+        <div class="modal-header__content modal-content">
+          <p class="modal-content__text modal__text text text-14">
+            Cпасибо, что написали нам!
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </body>
