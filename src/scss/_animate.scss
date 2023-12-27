@@ -36,6 +36,9 @@
 	animation-duration: 3s;
 	animation-name: fade-up;
 }
+.delay {
+	animation-delay: 0.3s;
+}
 
 @keyframes fade-up {
 	from {
