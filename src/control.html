@@ -12,9 +12,9 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <title>Управление биореактором</title>
 </head>
 
@@ -22,7 +22,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <a href="index.html" class="link-logo">
+        <a href="index" class="link-logo">
           <picture>
             <source media="(max-width: 798px)" srcset="img/logo-150.png" />
             <source media="(min-width: 799px)" srcset="img/logo-180.png" />
@@ -35,33 +35,35 @@
             aria-controls="menu"></button>
         </div>
 
-
-        <div class="header__nav nav-container bg-blue-main js-nav-block" id="menu" aria-hidden="true">
+        <div class="header__nav nav-container bg-header js-nav-block" id="menu" aria-hidden="true">
           <button class="nav__btn btn btn--close js-btn-close" aria-label="Закрыть меню" title="Закрыть меню"
             type="button"></button>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item nav-item nav-item--line uppercase">
-                Главная
-                <a href="index.html" class="nav__link link--absolute link"></a>
+              <li class="nav__item nav-item">
+                <a href="aboutus" class="nav__link nav__link--line uppercase">О нас</a>
               </li>
-              <li class="nav__item nav-item nav-item--line uppercase active-item">
-                Каталог
-                <a href="index.html#catalog" class="nav__link link--absolute link "></a>
+              <li class="nav__item nav-item">
+                <a href="contacts" class="nav__link nav__link--line uppercase">Контакты</a>
               </li>
-              <li class="nav__item nav-item nav-item--line  uppercase">
-                О нас
-                <a href="aboutus.html" class="nav__link link--absolute link "></a>
+              <li class="nav__item nav-item">
+                <a href="index#catalog" class="nav__link nav__link--line uppercase">Каталог</a>
+                <ul class="catalog__list catalog-list ">
+                  <li class="catalog__item catalog-item "><a href="avtoclav" class="catalog-link">Автоклавируемые</a>
+                  </li>
+                  <li class="catalog__item catalog-item"><a href="steril" class="catalog-link">Стерилизуемые</a></li>
+                  <li class="catalog__item catalog-item "><a href="small" class="catalog-link">Малогабаритные
+                      биореакторы</a></li>
+                  <li class="catalog__item catalog-item"><a href="disposable" class="catalog-link">Одноразовые
+                      ферментеры</a></li>
+                  <li class="catalog__item catalog-item item-active"><a href="control" class="catalog-link">Управление
+                      биореактором</a></li>
+                </ul>
               </li>
-              <li class="nav__item nav-item nav-item--line uppercase">
-                Контакты
-                <a href="contacts.html" class="nav__link link--absolute link"></a>
-              </li>
-
-
             </ul>
           </nav>
         </div>
+
 
       </div>
     </div>
@@ -192,29 +194,34 @@
             loading="lazy">
         </picture>
       </a>
+
       <div class="footer__wrapper fade-in-up js-scroll">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="avtoclav" class="link">Автоклавируемые</a>
+          </li>
+          <li class="nav__item"><a href="steril" class="link">Стерилизуемые</a>
+          </li>
+          <li class="nav__item"><a href="small" class="link">Малогабаритные
+              биореакторы</a></li>
+          <li class="nav__item"><a href="disposable" class="link">Одноразовые
+              ферментеры</a></li>
+          <li class="nav__item"><a href="control" class="link">Управление
+              биореактором</a>
+          </li>
+        </ul>
+
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class=" link"> О нас</a>
+              <a href="aboutus" class="link"> О нас</a>
             </li>
 
             <li class="nav__item">
-
-              <a href="#" class="link">Контакты</a>
-            </li>
-
-            <li class="nav__item ">
-
-              <a href="#catalog" class="link">Каталог</a>
+              <a href="contacts" class="link">Контакты</a>
             </li>
 
             <li class="nav__item">
-              <form action="./inc/senmail.php" method="post" class="nav__form form form--footer js-form">
-                <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
-                  placeholder="Написать нам"></textarea>
-                <button class="form__btn btn btn--footer" type="submit">Отправить</button>
-              </form>
+              <a href="index#catalog" class="link">Каталог</a>
             </li>
           </ul>
         </nav>
@@ -231,7 +238,9 @@
               <p class="address__text text--light">A15H8C3, Казахстан</p>
             </li>
             <li class="address__item">
-              <p class="address__text text--light">г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1</p>
+              <p class="address__text text--light">
+                г.&nbsp;Алматы, ул.&nbsp;Жандосова, дом&nbsp;36, офис&nbsp;1
+              </p>
             </li>
             <li class="address__item">
               <p class="address__text text--light">
@@ -248,6 +257,7 @@
           </ul>
         </address>
       </div>
+
       <div class="footer__wrapper--center wrapper-center">
         <small class="text--light">© <span class="year">2023</span> TOO «Era Metal»</small>
       </div>
@@ -315,24 +325,6 @@
             <li class="modal-body__item">Маломасштабное производство белков и моноклональных антител</li>
             <li class="modal-body__item">Исследовательские и учебные процессы.</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal js-popup hidden" aria-modal="true" role="dialog" aria-label="Модальное окно с описанием продукта">
-    <div class="modal__container popup">
-      <button class="modal__btn btn btn--close btn--close-blue js-btn-popup-close" aria-label="Закрыть модальное окно"
-        type="button"></button>
-      <div class="popup__header">
-        <div class="modal-header__container-img">
-          <img src="img/popup.svg" alt="BIOSTAT®A" class="modal__img" loading="lazy">
-        </div>
-
-        <div class="modal-header__content modal-content">
-          <p class="modal-content__text modal__text text text-14">
-            Cпасибо, что написали нам!
-          </p>
         </div>
       </div>
     </div>

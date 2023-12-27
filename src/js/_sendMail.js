@@ -1,9 +1,9 @@
 import { successSentForm, popupEl } from './_utils';
 
-const form = document.querySelectorAll('.js-form');
+export const form = document.querySelectorAll('.js-form');
 const linkSendLightForm = './inc/senmail.php';
 
-const sendEmail = () => {
+export const sendEmail = () => {
   form.forEach(formItem => {
     formItem.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -25,7 +25,5 @@ const sendEmail = () => {
         console.log('no');
       }
     });
-});
+  });
 };
-
-export default sendEmail;

@@ -5,12 +5,6 @@
 .bg-light-grey {
   background-color: $light-grey;
 }
-.bg-blue-main {
-  background-color: $main-color;
-  backdrop-filter: blur(30px);
-  background-color: #1e22fa00;
-  box-shadow: inset 2px 0px 8px rgba(184, 184, 184, 0.229);
-}
 
 .title--first {
   color: $main-color;
@@ -91,7 +85,7 @@
     border-radius: 50%;
     border: 2px solid transparent;
     background: url("./img/burger-icon.svg") no-repeat center;
-    background-size: 35px;
+    background-size: 30px;
     transition: $trans-03;
 
     &:hover,

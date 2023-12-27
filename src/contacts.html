@@ -11,9 +11,9 @@
   <link rel="mask-icon" href="assets/favicon//safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" />
-  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" />
-  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" />
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <title>Каталог товара</title>
 </head>
 
@@ -21,11 +21,11 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <a href="index.html" class="link-logo">
+        <a href="index" class="link-logo">
           <picture>
             <source media="(max-width: 798px)" srcset="img/logo-150.png" />
             <source media="(min-width: 799px)" srcset="img/logo-180.png" />
-            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo" />
+            <img src="img/logo-180.png" alt="Логотип компании" class="header__logo">
           </picture>
         </a>
 
@@ -34,30 +34,35 @@
             aria-controls="menu"></button>
         </div>
 
-        <div class="header__nav nav-container bg-blue-main js-nav-block" id="menu" aria-hidden="true">
+        <div class="header__nav nav-container bg-header js-nav-block" id="menu" aria-hidden="true">
           <button class="nav__btn btn btn--close js-btn-close" aria-label="Закрыть меню" title="Закрыть меню"
             type="button"></button>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item nav-item nav-item--line uppercase">
-                Главная
-                <a href="index.html" class="nav__link link--absolute link"></a>
+              <li class="nav__item nav-item">
+                <a href="aboutus" class="nav__link nav__link--line uppercase">О нас</a>
               </li>
-              <li class="nav__item nav-item nav-item--line uppercase">
-                Каталог
-                <a href="index.html#catalog" class="nav__link link--absolute link "></a>
+              <li class="nav__item nav-item">
+                <a href="contacts" class="nav__link nav__link--line uppercase active-item">Контакты</a>
               </li>
-              <li class="nav__item nav-item nav-item--line uppercase">
-                О нас
-                <a href="aboutus.html" class="nav__link link--absolute link"></a>
-              </li>
-              <li class="nav__item nav-item nav-item--line uppercase active-item">
-                Контакты
-                <a href="contacts.html" class="nav__link link--absolute link"></a>
+              <li class="nav__item nav-item">
+                <a href="index#catalog" class="nav__link nav__link--line uppercase">Каталог</a>
+                <ul class="catalog__list catalog-list ">
+                  <li class="catalog__item catalog-item "><a href="avtoclav" class="catalog-link">Автоклавируемые</a>
+                  </li>
+                  <li class="catalog__item catalog-item"><a href="steril" class="catalog-link">Стерилизуемые</a></li>
+                  <li class="catalog__item catalog-item "><a href="small" class="catalog-link">Малогабаритные
+                      биореакторы</a></li>
+                  <li class="catalog__item catalog-item"><a href="disposable" class="catalog-link">Одноразовые
+                      ферментеры</a></li>
+                  <li class="catalog__item catalog-item"><a href="control" class="catalog-link">Управление
+                      биореактором</a></li>
+                </ul>
               </li>
             </ul>
           </nav>
         </div>
+
       </div>
     </div>
   </header>
@@ -82,7 +87,7 @@
     </div>
 
     <div class="vertival-line animate-3"></div>
-    <section class="section about-text bg-light-grey">
+    <section class="section section--big about-text bg-light-grey">
       <div class="container">
         <div class="section__container">
           <div class="contact-address">
@@ -154,31 +159,32 @@
         </picture>
       </a>
       <div class="footer__wrapper fade-in-up js-scroll">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="avtoclav" class="link">Автоклавируемые</a>
+          </li>
+          <li class="nav__item"><a href="steril" class="link">Стерилизуемые</a>
+          </li>
+          <li class="nav__item"><a href="small" class="link">Малогабаритные
+              биореакторы</a></li>
+          <li class="nav__item"><a href="disposable" class="link">Одноразовые
+              ферментеры</a></li>
+          <li class="nav__item"><a href="control" class="link">Управление
+              биореактором</a>
+          </li>
+        </ul>
+
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="link">Главная</a>
-            </li>
-            <li class="nav__item">
-              <a href="index.html#catalog" class="link">Каталог</a>
+              <a href="aboutus" class="link"> О нас</a>
             </li>
 
             <li class="nav__item">
-              <a href="aboutus.html" class="link"> О нас</a>
+              <a href="contacts" class="link">Контакты</a>
             </li>
 
             <li class="nav__item">
-              <a href="#" class="link">Контакты</a>
-            </li>
-
-            <li class="nav__item">
-              <form action="./inc/senmail.php" class="nav__form form form--footer js-form" method="post">
-                <textarea class="form__textarea" name="footer-message" cols="20" rows="1"
-                  placeholder="Написать нам"></textarea>
-                <button class="form__btn btn btn--footer" type="submit">
-                  Отправить
-                </button>
-              </form>
+              <a href="index#catalog" class="link">Каталог</a>
             </li>
           </ul>
         </nav>

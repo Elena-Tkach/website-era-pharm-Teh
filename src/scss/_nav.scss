@@ -1,3 +1,8 @@
+.bg-header {
+  background-color: $white;
+  box-shadow: 2px 0px 8px rgba(184, 184, 184, 0.229);
+}
+
 .header__wrap {
   &:hover {
     .menu__text {
@@ -11,14 +16,14 @@
 }
 
 .nav-container {
-  z-index: 21;
+  z-index: 22;
   width: 80%;
   height: auto;
   top: 0;
   bottom: 0;
   right: 0;
   position: fixed;
-  padding: 100px 40px 0;
+  padding: 80px 40px;
 
   opacity: 0;
   visibility: hidden;
@@ -44,7 +49,7 @@
 }
 
 .nav__item {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 0;
@@ -65,64 +70,115 @@
 }
 
 .nav-item {
-  position: relative;
   transition: $trans-06;
-  padding: 10px 0;
   color: $white;
   color: $main-color;
   @include font($weight: 500);
+
+  &--m {
+    margin-bottom: 60px;
+  }
 }
-.nav-item--line {
+.nav__link--line {
   &::after {
     content: "";
     right: 0;
     top: 50%;
-    width: 60px;
+    width: 30%;
     height: 2px;
     background-color: $main-color;
     position: absolute;
     transition: $trans-06;
   }
 
-  &:nth-child(2n) {
-    padding-left: 70px;
+  &:hover {
     &::after {
-      content: "";
-      left: 0;
-      top: 50%;
-      width: 60px;
-      height: 2px;
-      background-color: $main-color;
-      position: absolute;
+      right: 5px;
     }
   }
 }
 
-.nav-item--line {
+.nav__link--line {
   position: relative;
+  display: block;
   transition: $trans-06;
+}
 
+.nav__link {
+  padding: 10px 0;
   &:hover {
     color: #bcbde9;
     padding-left: 5px;
     &::after {
       background-color: #bcbde9;
     }
-
-    &:nth-child(2n) {
-      padding-left: 75px;
-    }
   }
 }
 
 .active-item {
-  &::after {
-    background-color: #bcbde9;
-  }
-  &:nth-child(2n) {
+  color: #bcbde9;
+  .nav__link--line {
     &::after {
       background-color: #bcbde9;
     }
   }
-  color: #bcbde9;
+}
+
+.catalog-list {
+  padding-left: 15px;
+  padding-top: 25px;
+  list-style: square;
+  text-align: end;
+
+  &--f {
+    list-style: none;
+    text-align: left;
+  }
+}
+.catalog__item {
+  margin-bottom: 15px;
+  padding: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-item {
+  @include font($weight: 300, $size: min(max(14px, 4vw), 16px));
+
+  transition: $trans-06;
+  &::marker {
+    transition: $trans-06;
+  }
+
+  &:hover {
+    margin-left: 5px;
+    &::marker {
+      color: $blue-overlay;
+    }
+  }
+  .catalog-link {
+    transition: $trans-06;
+    &:hover {
+      color: $blue-overlay;
+    }
+  }
+
+  &--f {
+    color: $black;
+    font-size: min(max(12px, 4vw), 16px);
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      margin-left: 0;
+    }
+  }
+}
+
+.item-active {
+  color: $blue-overlay;
 }

@@ -1,5 +1,5 @@
 .header {
-  z-index: 5;
+  z-index: 7;
   position: relative;
   padding: 20px 0 20px;
 }
@@ -76,6 +76,10 @@
 .section {
   transition: $trans-06;
   padding: 20px 0;
+}
+
+.section--big {
+  padding: 80px 0;
 }
 
 .catalog {

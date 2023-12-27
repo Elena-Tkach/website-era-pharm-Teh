@@ -11,14 +11,12 @@ const menuScrolled = (btnEl, scrollPosition) => {
   }
 };
 
-const checkBoxes = (boxEl) => {
-  const box = boxEl;
+const checkBoxes = (box) => {
   const triggerTop = window.innerHeight - 50;
 
   scrollItems.forEach(box => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < triggerTop) {
-      console.log(boxTop, triggerTop);
       box.classList.add('isanimate');
     }
   });
