@@ -616,6 +616,12 @@
         }
       }
     }
+
+    &:hover {
+      .card-item-bg {
+        transform: translate3d(0, -30px, 0);
+      }
+    }
     .cards__btn {
       left: 28%;
     }
